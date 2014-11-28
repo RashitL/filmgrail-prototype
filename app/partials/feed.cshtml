@@ -1,0 +1,25 @@
+﻿<h2>Feed <i class="pull-right icon-align-justify"></i></h2>
+<br />
+<div class="well well-sm" ng-repeat="movie in feed">
+    <div class="media">
+        <div class="media pull-left" href="#">
+            <div>
+                <div>
+                    <i class="icon-plus pointer" style="position: absolute; padding-left: 160px; padding-top: 10px;"></i>
+                    <img ng-src="https://image.tmdb.org/t/p/w185{{movie.PosterPath}}" alt="..." />
+                </div>
+                <div>
+                    <a href="#" class="btn btn-sm btn-default" style="width: 49%"><i class="icon-thumbs-down red"></i>&nbsp;</a>
+                    <a href="#" class="btn btn-sm btn-default" style="width: 49%"><i class="icon-thumbs-up text-success"></i>&nbsp;</a>
+                </div>
+            </div>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">{{movie.Title}}, {{movie.ProductionYear}} <span class="label label-default pull-right">IMDB: {{movie.Rating | number:1}}</span></h4>
+            <p>Simon, Inge and 34 others liked</p>
+            <p>Simon 4 others commented</p>
+            @*{{movie|json}}*@
+        </div>
+    </div>
+
+</div>

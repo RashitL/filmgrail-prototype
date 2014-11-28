@@ -1,0 +1,348 @@
+﻿/**
+{
+    -webkit-backface-visibility: hidden;
+}
+
+html, body
+{
+    -webkit-user-select: none;
+}*/
+
+html, body
+{
+    height: 100%;
+    background-color: #FFFFFF!important;
+}
+
+.ui-match
+{
+    background: yellow;
+}
+
+.pointer
+{
+    cursor: pointer;
+}
+
+.border-right
+{
+    border-right: 1px solid #eee;
+}
+
+.label-simple
+{
+    border: none;
+    background: none;
+    color: inherit;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.red
+{
+    color: #f04124;
+}
+
+.break-word
+{
+    word-break: break-all;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.column
+{
+    overflow-x: hidden;
+}
+
+#ticketList .ticket .labels .label-default
+{
+    background-color: #f0f0f0;
+}
+
+#ticketList .ticket .labels .label
+{
+    display: inline-block;
+    width: 20px;
+    margin-right: 0 !important;
+    font-size: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+#thread .text-right img, #comments .text-right img
+{
+    width: 15%;
+    max-width: 100px;
+    margin-left: 15px;
+}
+
+@media (min-width: 768px)
+{
+    .column
+    {
+        height: 100%;
+        overflow-y: auto;
+    }
+}
+
+.top5
+{
+    margin-top: 5px;
+}
+
+.top10
+{
+    margin-top: 10px;
+}
+
+.left5
+{
+    margin-left: 5px;
+}
+
+.left0
+{
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.mediumBold a
+{
+    cursor: pointer !important;
+    color: #008cba !important;
+}
+
+.navbar-collapse .mediumBold a
+{
+    color: white !important;
+}
+
+h3, h4
+{
+    font-weight: 300;
+}
+
+.inbox .nav a
+{
+    /*font-weight: 600;*/
+    color: #aaa;
+    cursor: default;
+}
+
+.animate.ng-move,
+.animate.ng-enter,
+.animate.ng-leave
+{
+    -webkit-transition: all linear 0.3s;
+    transition: all linear 0.3s;
+}
+
+    .animate.ng-leave.ng-leave-active,
+    .animate.ng-move,
+    .animate.ng-enter
+    {
+        opacity: 0;
+        transform: scale(0.95);
+        -webkit-transform: scale(0.95);
+        -o-transform: scale(0.95);
+        -moz-transform: scale(0.95);
+    }
+
+        .animate.ng-leave,
+        .animate.ng-move.ng-move-active,
+        .animate.ng-enter.ng-enter-active
+        {
+            opacity: 1;
+            transform: scale(1);
+            -webkit-transform: scale(1);
+            -o-transform: scale(1);
+            -moz-transform: scale(1);
+            height: auto;
+        }
+
+.animate-show
+{
+    -webkit-transition: all linear 1.5s;
+    transition: all linear 1.5s;
+    opacity: 1;
+    line-height: 2;
+}
+
+    .animate-show.ng-hide-add,
+    .animate-show.ng-hide-remove
+    {
+        display: block!important;
+        line-height: 2;
+    }
+
+    .animate-show.ng-hide
+    {
+        opacity: 0;
+        line-height: 1;
+    }
+
+.animate-show
+{
+    -webkit-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+    opacity: 1;
+}
+
+    .animate-show.ng-hide
+    {
+        opacity: 0;
+    }
+
+    .animate-show.ng-hide-add, .animate-show.ng-hide-remove
+    {
+        /* this needs to be here to make it visible during the animation
+     since the .ng-hide class is already on the element rendering
+     it as hidden. */
+        display: block!important;
+    }
+
+#thread .dropdown-menu
+{
+    top: 0;
+}
+
+#thread span.icon-pencil
+{
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+#chooseCategoryModal .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus
+{
+    background-color: #eeeeee;
+}
+
+.ng-valid-required.ng-invalid.form-control
+{
+    border-color: rgba(233, 10, 10, 0.6);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(233, 10, 10, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(233, 10, 10, 0.6);
+}
+
+#login .form-control
+{
+    font-size: 18px;
+}
+
+.fs-multiselect .fs-multiselect-wrapper .fs-multiselect-selected-items .btn
+{
+    padding: 3px;
+}
+
+.props
+{
+    margin-bottom: 10px;
+}
+
+    .props .label
+    {
+        margin-right: 5px;
+        margin-bottom: 10px;
+        padding-bottom: 4px;
+        padding-top: 4px;
+    }
+
+.my-drop-zone
+{
+    border: dotted 1px lightgray;
+}
+
+.ng-file-over
+{
+    border: dotted 1px red;
+}
+/* Default class applied to drop zones on over */
+#ticketList .message
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ellipsis
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+#ticketDetail .label, .modal-dialog .label
+{
+    display: inline-block;
+    line-height: 1.6;
+}
+
+.white
+{
+    color: white!important;
+}
+
+.blue
+{
+    color: #008cba;
+}
+
+a:link
+{
+    text-decoration: none!important;
+}
+
+.from-staff
+{
+    background-color: #eeeeee!important;
+}
+
+.just-posted
+{
+    background-color: #CFFAD0!important;
+}
+
+.select2-container-multi .select2-choices .select2-search-field input
+{
+    line-height: 1.1;
+    color: #6f6f6f;
+    background-color: none;
+    background-image: none!important;
+    border: none!important;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.select2-choices
+{
+    border: 1px solid #eeeeee !important;
+}
+
+.select2-container-multi .select2-choices .select2-search-choice
+{
+    border: none!important;
+}
+
+.select2-container.select2-container-multi
+{
+    width: auto!important;
+    min-width: 100px!important;
+}
+
+.left-menu {
+    opacity: 0.5;
+     -webkit-transition: 0.3s linear all;
+    transition: 0.3s linear all;
+}
+
+.left-menu:hover {
+    opacity: 1;
+}

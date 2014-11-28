@@ -1,0 +1,47 @@
+﻿<h1>{{showForgotPswd?'Password recovery':'Log in'}}</h1>
+<form ng-hide="showForgotPswd" id="login" ng-submit="login()" class="form-horizontal col-xs-12" role="form" style="max-width: 400px;" formauto>
+    <div class="form-group">
+        <h3>Portal name</h3>
+
+        <div class="input-group">
+            <span class="input-group-addon">{{oldUrl}}</span>
+            <input class="form-control" name="portalName" placeholder="your portal name..." type="text" required ui-validate ng-model="community">
+        </div>
+    </div>
+    <div class="form-group">
+        <h3>Email</h3>
+        <input class="form-control" name="email" placeholder="email" type="email" required ng-model="email" ui-validate>
+    </div>
+    <div class="form-group">
+        <h3>Password</h3>
+        <input class="form-control" name="password" type="password" required ng-model="password" placeholder="password">
+    </div>
+    <div class="form-group">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" checked="checked">
+                Remember me
+            </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-default btn-block">{{loggingIn?'Signing in... ':'Sign in '}}</button>
+        <a class="btn btn-link" ng-click="showForgotPswd=!showForgotPswd">Forgot password?</a>
+    </div>
+    <div class="form-group">
+        <label style="font-size: 14px" ng-show="errorMessage!=null" class="label label-danger">{{errorMessage}}</label>
+    </div>
+</form>
+<form ng-show="showForgotPswd" id="login" ng-submit="remindPassword()" class="form-horizontal col-xs-12" role="form" style="max-width: 400px;">
+    <div class="form-group">
+        <h3>Email</h3>
+        <input class="form-control" name="email" placeholder="email" type="email" required ng-model="email" ui-validate>
+        <p class="help-block">Enter the email address you registered with and we'll send you details on how to reset your password.</p>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-default btn-block">{{loggingIn?'Wait... ':'Email me'}}</button>
+    </div>
+    <div class="form-group">
+        <label style="font-size: 14px" ng-show="errorMessage!=null" class="label label-danger">{{errorMessage}}</label>
+    </div>
+</form>
