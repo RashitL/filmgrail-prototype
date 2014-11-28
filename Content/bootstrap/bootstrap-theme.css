@@ -1,0 +1,220 @@
+html, body, .container-fluid {
+    height: 100%;
+}
+
+body {
+    font-weight: normal;
+    color: #222222;
+}
+
+.gray {
+    color: #555555;
+}
+
+a {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.nav-tabs > li > a {
+    background-color: white;
+}
+
+.nav > li > a {
+    padding: 6.5px 15px;
+}
+
+.list-group, body, blockquote {
+    font-size: 14px;
+}
+
+.ticket.active, .ticket.active:hover, .ticket.active:focus {
+    z-index: 2;
+    color: #222222;
+    background-color: #eeeeee;
+    border-color: white;
+}
+
+.ticket {
+    cursor: pointer;
+}
+
+.list-group-item {
+    border: none;
+    border-top: 1px solid #eee;
+    padding-bottom: 15px;
+    /*margin-bottom: 0;*/
+}
+
+.label-default {
+    background-color: transparent;
+    border: 1px solid #eee;
+    margin-right: 5px;
+}
+
+a.label-default:hover, a.label-default:hover i, a.label-default:hover span {
+    background: transparent !important;
+    color: #008cba !important;
+}
+
+.label-warning {
+    background-color: #e99002 !important;
+    color: white !important;
+}
+
+.form-control {
+    border-color: #ddd;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    background-color: white;
+    border: 1px solid #eee;
+    color: #222222;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    color: #aaa;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-top: 3px;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.nav > li .active {
+    background: #eeeeee;
+}
+
+.inbox .nav > li > a {
+    margin-left: -15px;
+    padding-left: 15px;
+}
+
+.nav-list .nav-divider {
+    margin-right: 15px;
+}
+
+.navbar li > a, .navbar li > a:hover, .navbar li :hover {
+    color: white;
+    background: none;
+}
+
+.navbar li .active {
+    font-weight: 600;
+    background: none;
+}
+
+.navbar h4 {
+    color: white;
+}
+
+.navbar-collapse {
+    max-height: none;
+}
+
+.navbar-toggle {
+    float: left;
+    padding: 9px 15px;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.navbar-brand {
+    float: right;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+
+.modal-header .close {
+    padding: 10px;
+    margin: -10px;
+    padding-left: 30px;
+}
+
+@media (max-width: 768px) {
+    .modal-dialog {
+        margin: 0;
+    }
+
+    #ticketDetail {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+        #ticketDetail .loading {
+            margin-left: 15px;
+        }
+
+    .mediumBold a {
+        color: white !important;
+    }
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+    color: black;
+    background-color: white;
+    font-weight: 600;
+}
+
+.dropdown-menu > li > a {
+    font-weight: 300;
+}
+
+.list-group {
+    font-weight: normal;
+}
+
+
+a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus {
+    background-color: #eeeeee;
+    border-color: #eeeeee;
+    color: black;
+}
+
+.carousel-inner > .item > img {
+    width: 100%;
+}
+
+.alert {
+    font-size: 14px;
+}
+
+.well {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.carousel-inner {
+    min-height: 170px;
+}
+
+.nav-pills {
+    font-weight: normal;
+}
+
+
+.label {
+    font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: normal;
+}
+
+.label-danger i, .label-primary i, .label-warning i, .btn-danger i {
+    color: white;
+}
+
+.progress {
+    width: 70%;
+    margin-bottom: 0;
+    border-color: white;
+    background: white;
+}

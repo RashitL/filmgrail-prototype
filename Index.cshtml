@@ -1,0 +1,43 @@
+﻿@using System.Web.Optimization
+<!doctype html>
+<html ng-app="app">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link href="favicon.ico" rel="shortcut icon" type="image/ico">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>Filmgrail prototype</title>
+    @Styles.Render("~/content/vendor")
+    @Styles.Render("~/content/app")
+</head>
+<body ng-controller="mainCtrl">
+    <div class="container">
+        <div class="col-md-3 left-menu">
+            <h2>FILMGRAIL</h2>
+            <br/>
+            <div class="list-group">
+                <a class="list-group-item">
+                    Feed
+                </a>
+                <a class="list-group-item">
+                    My movies
+                </a>
+                <a class="list-group-item">
+                    <span class="badge">14</span>
+                    Activity
+                </a>
+                <a class="list-group-item">
+                    Profile
+                </a>
+            </div>
+        </div>
+        <div class="col-md-9" ui-view>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/vendor")
+    @*<script src="http://ivaynberg.github.com/select2/select2-3.2/select2.js"></script>*@
+    @Scripts.Render("~/bundles/app")
+</body>
+</html>
+
+
+
