@@ -74,7 +74,7 @@ app.factory("user", ['$http', '$q', '$window', 'appConfig', '$state', '$statePar
                 $window.localStorage.removeItem(appConfig.localStorageKeyCommunity);
                 object.session = null;
                 $('#menuModal').modal('hide');
-                setTimeout(function () { $state.go(appConfig.loginState) }, 400);
+                //setTimeout(function () { $state.go(appConfig.loginState) }, 400);
             },
             authorized: function () {
                 return object.session !== null;
@@ -141,7 +141,7 @@ appServices.run(function ($rootScope, user, appConfig, $state, $stateParams) {
                     return void 0;
                 appConfig.returnParams = toParams;
                 appConfig.returnState = toState;
-                $state.go(appConfig.loginState, toParams);
+                //$state.go(appConfig.loginState, toParams);
                 event.preventDefault();
             }
         }
