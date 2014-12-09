@@ -8,12 +8,11 @@
 app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('feed', {
-            url: "/",
-            templateUrl: 'app/partials/feed.cshtml',
-            controller: 'feedCtrl'
+            url: "/feed",
+            templateUrl: 'app/partials/feed.cshtml'
         });
 
     $urlRouterProvider
          // If the url is ever invalid, e.g. '/asdf', then redirect to '/' aka the home state
-         .otherwise('/');
+         .otherwise('/feed');
 }]);
