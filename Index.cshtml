@@ -27,21 +27,34 @@
                 </a>
             </div>
         </div>
-        <div class="col-md-9"  ng-controller="feedCtrl">
+        <div class="col-md-9" ng-controller="feedCtrl">
             <h2>Feed <i class="pull-right icon-align-justify"></i></h2>
             <br />
+            <div class="row">
+                <div class="col-md-3" ng-repeat="movie in feed">
+                    <div>
+                        <span style="position: absolute; padding-left: 120px; padding-top: 10px; color: #aaa; font-size: 12px;">Imdb {{movie.Rating | number:1}}</span>
+                        <img class="img-responsive" ng-src="https://image.tmdb.org/t/p/w185{{movie.PosterPath}}" alt="..." />
+                    </div>
+                    <div style="margin-top: -40px; padding: 10px; opacity: 0.7; background: black">
+                        <div class="row">
+                            <div class="col-xs-4"><i class="icon-heart-empty">&nbsp;{{movie.Likes.length | nullIfZero}}</i></div>
+                            <div class="col-xs-4"><i class="icon-comment-alt">&nbsp;2</i></div>
+                            <div class="col-xs-4"><i class="icon-share-alt">&nbsp;1</i></div>
+                        </div>
+
+                    </div>
+                    <div style="height: 40px">
+                        <p ng-show="movie.Likes.length>0" ng-hide="{{movie.Likes.length==0&&movie.UsersHavingMovie.length}}">{{movie.Likes[0].Name | limitTo:10}} liked it</p>
+                        <p ng-show="{{movie.Likes.length==0 && movie.UsersHavingMovie.length>0}}">{{movie.UsersHavingMovie[0].Name | limitTo:10}} shared it</p>
+                    </div>
+                    
+                </div>
+            </div>
             <div class="well well-sm" ng-repeat="movie in feed">
                 <div class="media">
                     <div class="media pull-left" href="#">
                         <div>
-                            <div>
-                                <i class="icon-plus pointer" style="position: absolute; padding-left: 160px; padding-top: 10px;"></i>
-                                <img ng-src="https://image.tmdb.org/t/p/w185{{movie.PosterPath}}" alt="..." />
-                            </div>
-                            <div>
-                                <a href="#" class="btn btn-sm btn-default" style="width: 49%"><i class="icon-thumbs-down red"></i>&nbsp;</a>
-                                <a href="#" class="btn btn-sm btn-default" style="width: 49%"><i class="icon-thumbs-up text-success"></i>&nbsp;</a>
-                            </div>
                         </div>
                     </div>
                     <div class="media-body">
