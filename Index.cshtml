@@ -36,10 +36,10 @@
                     <div style="margin-bottom: -33px; padding: 7px; opacity: 0.7; background: black">
                         <div class="row">
                             <div class="col-xs-12">
-                                <i class="icon-star pull-left">&nbsp;{{movie.Rating | number:1}}</i>
-                                <i ng-show="movie.Likes.length>0" class="icon-signal pull-right"></i>
-                                <i ng-show="movie.Likes.length>1" class="icon-television-tv pull-right"></i>
-                                <i ng-show="movie.Likes.length>2" class="icon-cinema pull-right"></i>
+                                <i tooltip="IMDB rating" tooltip-placement="top" data-toggle="tooltip" class="icon-star pull-left">&nbsp;{{movie.Rating | number:1}}</i>
+                                <i tooltip="Avaialbe on Netflix and ITunes" tooltip-placement="top" data-toggle="tooltip" ng-show="movie.Likes.length>0" class="icon-signal pull-right"></i>
+                                <i tooltip="Airing on NRK2 tomorrow 21:00" tooltip-placement="top" data-toggle="tooltip" ng-show="movie.Likes.length>1" class="icon-television-tv pull-right"></i>
+                                <i tooltip="Avaialbe in cinemas" tooltip-placement="top" data-toggle="tooltip" ng-show="movie.Likes.length>2" class="icon-cinema pull-right"></i>
                             </div>
                         </div>
                     </div>
