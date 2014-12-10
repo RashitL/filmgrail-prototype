@@ -33,7 +33,7 @@
             <br />
             <div class="row">
                 <div class="col-md-3" ng-repeat="movie in feed">
-                    <div style="margin-bottom: -33px; padding: 7px; opacity: 0.7; background: black">
+                    <div style="margin-bottom: -30px; padding: 7px; opacity: 0.7; background: black;height: 30px;">
                         <div class="row">
                             <div class="col-xs-12">
                                 <i tooltip="IMDB rating" tooltip-placement="top" data-toggle="tooltip" class="icon-star pull-left">&nbsp;{{movie.Rating | number:1}}</i>
@@ -46,7 +46,7 @@
                     <div>
                         <img class="img-responsive" ng-src="https://image.tmdb.org/t/p/w185{{movie.PosterPath}}" alt="..." />
                     </div>
-                    <div style="margin-top: -40px; padding: 10px; opacity: 0.7; background: black">
+                    <div style="margin-top: -30px; padding: 10px; opacity: 0.7; background: black;height: 30px;padding-top: 7px;">
                         <div class="row">
                             <div class="col-xs-4"><i class="icon-heart-empty">&nbsp;{{movie.Likes.length | nullIfZero}}</i></div>
                             <div class="col-xs-4"><i class="icon-comment-alt">&nbsp;2</i></div>
