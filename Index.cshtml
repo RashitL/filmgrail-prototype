@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="col-md-3 left-menu">
+       @* <div class="col-md-3 left-menu">
             <h2>FILMGRAIL</h2>
             <br />
             <div class="list-group">
@@ -27,12 +27,12 @@
                 <a class="list-group-item">Profile
                 </a>
             </div>
-        </div>
-        <div class="col-md-9" ng-controller="feedCtrl">
+        </div>*@
+        <div class="col-md-12" ng-controller="feedCtrl">
             <h2>Feed <i class="pull-right icon-align-justify"></i></h2>
             <br />
             <div class="row">
-                <div class="col-md-3 col-xs-6" ng-repeat="movie in feed">
+                <div class="col-lg-2 col-md-3 col-xs-4 col-xs-6" ng-repeat="movie in feed">
                     <div style="margin-bottom: -30px; padding: 7px; opacity: 0.7; background: black; height: 30px;">
                         <div class="row">
                             <div class="col-xs-12">
