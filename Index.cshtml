@@ -8,6 +8,7 @@
     <title>Filmgrail prototype</title>
     @Styles.Render("~/content/vendor")
     @Styles.Render("~/content/app")
+    <link href="https://fontastic.s3.amazonaws.com/HCMCBd5ToJQCErxqRK2JW/icons.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -32,8 +33,17 @@
             <br />
             <div class="row">
                 <div class="col-md-3" ng-repeat="movie in feed">
+                    <div style="margin-bottom: -33px; padding: 7px; opacity: 0.7; background: black">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <i class="icon-star pull-left">&nbsp;{{movie.Rating | number:1}}</i>
+                                <i ng-show="movie.Likes.length>0" class="icon-signal pull-right"></i>
+                                <i ng-show="movie.Likes.length>1" class="icon-television-tv pull-right"></i>
+                                <i ng-show="movie.Likes.length>2" class="icon-cinema pull-right"></i>
+                            </div>
+                        </div>
+                    </div>
                     <div>
-                        <span style="position: absolute; padding-left: 120px; padding-top: 10px; color: #aaa; font-size: 12px;">Imdb {{movie.Rating | number:1}}</span>
                         <img class="img-responsive" ng-src="https://image.tmdb.org/t/p/w185{{movie.PosterPath}}" alt="..." />
                     </div>
                     <div style="margin-top: -40px; padding: 10px; opacity: 0.7; background: black">
@@ -42,13 +52,12 @@
                             <div class="col-xs-4"><i class="icon-comment-alt">&nbsp;2</i></div>
                             <div class="col-xs-4"><i class="icon-share-alt">&nbsp;1</i></div>
                         </div>
-
                     </div>
                     <div style="height: 40px">
                         <p ng-show="movie.Likes.length>0" ng-hide="{{movie.Likes.length==0&&movie.UsersHavingMovie.length}}">{{movie.Likes[0].Name | limitTo:10}} liked it</p>
                         <p ng-show="{{movie.Likes.length==0 && movie.UsersHavingMovie.length>0}}">{{movie.UsersHavingMovie[0].Name | limitTo:10}} shared it</p>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="well well-sm" ng-repeat="movie in feed">
