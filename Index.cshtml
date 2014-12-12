@@ -11,8 +11,8 @@
     <link href="https://fontastic.s3.amazonaws.com/HCMCBd5ToJQCErxqRK2JW/icons.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-       @* <div class="col-md-3 left-menu">
+    <div class="container" style="max-width: 1050px">
+        <div class="col-md-3 left-menu">
             <h2>FILMGRAIL</h2>
             <br />
             <div class="list-group">
@@ -27,12 +27,14 @@
                 <a class="list-group-item">Profile
                 </a>
             </div>
-        </div>*@
-        <div class="col-md-12" ng-controller="feedCtrl">
-            <h2>Feed <i class="pull-right icon-align-justify"></i></h2>
-            <br />
+        </div>
+        <div class="col-md-9" ng-controller="feedCtrl" style="padding-top: 20px">
+            <input ui-select2="tagOptions" placeholder="Search or select tags..." ng-model="tags" style="margin-bottom: 5px; margin-top: 5px">
+
+            <label ng-click="addTag(tag)" class="label label-info pointer" style="padding: 6px; margin-left: 5px" ng-repeat="tag in tagList">{{tag}}</label>
+            <hr />
             <div class="row">
-                <div class="col-lg-2 col-md-3 col-xs-4 col-xs-6" ng-repeat="movie in feed">
+                <div class="col-sm-4 col-xs-6" ng-repeat="movie in feed" style="margin-bottom: 25px;height: 340px;">
                     <div style="margin-bottom: -30px; padding: 7px; opacity: 0.7; background: black; height: 30px;">
                         <div class="row">
                             <div class="col-xs-12">
@@ -44,20 +46,18 @@
                         </div>
                     </div>
                     <div>
-                        <img class="img-responsive" ng-src="https://image.tmdb.org/t/p/w185{{movie.PosterPath}}" alt="..." />
+                        <img class="img-responsive" style="width: 100%;" ng-src="https://image.tmdb.org/t/p/w185{{movie.PosterPath}}" alt="..." />
                     </div>
-                    <div style="margin-top: -30px; padding: 10px; opacity: 0.7; background: black; height: 30px; padding-top: 7px;">
+                    <div style="margin-top: -60px; padding: 10px; opacity: 0.7; background: black; height: 60px; padding-top: 7px;">
+                        <p style="color: #E0E0E0; font-size: 12px;" ng-show="movie.Likes.length>0" ng-hide="movie.Likes.length==0&&movie.UsersHavingMovie.length">{{movie.Likes[0].Name | limitTo:10}} liked it</p>
+                        <p style="color: #E0E0E0; font-size: 12px;" ng-show="movie.Likes.length==0 && movie.UsersHavingMovie.length>0">{{movie.UsersHavingMovie[0].Name | limitTo:10}} shared it</p>
                         <div class="row">
-                            <div class="col-xs-4"><i class="icon-heart-empty">&nbsp;{{movie.Likes.length | nullIfZero}}</i></div>
-                            <div class="col-xs-4"><i class="icon-comment-alt">&nbsp;2</i></div>
-                            <div class="col-xs-4"><i class="icon-share-alt">&nbsp;1</i></div>
+                            <div class="col-xs-4 text-center"><i class="icon-heart-empty">&nbsp;{{movie.Likes.length | nullIfZero}}</i></div>
+                            <div class="col-xs-4 text-center"><i class="icon-comment-alt">&nbsp;2</i></div>
+                            <div class="col-xs-4 text-center"><i class="icon-share-alt">&nbsp;1</i></div>
                         </div>
                     </div>
-                    <div style="height: 40px">
-                        <p ng-show="movie.Likes.length>0" ng-hide="{{movie.Likes.length==0&&movie.UsersHavingMovie.length}}">{{movie.Likes[0].Name | limitTo:10}} liked it</p>
-                        <p ng-show="{{movie.Likes.length==0 && movie.UsersHavingMovie.length>0}}">{{movie.UsersHavingMovie[0].Name | limitTo:10}} shared it</p>
-                    </div>
-
+                    
                 </div>
             </div>
         </div>

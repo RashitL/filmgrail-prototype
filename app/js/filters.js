@@ -16,35 +16,9 @@
         var lessComments = Enumerable.From(comments).Skip(comments.length - skip).ToArray();
         return show ? comments : lessComments;
     };
-}).filter('pagingForReplies', function () {
-    return function (comments, take, showUnAnsweredReplies, latestId, threadCollapsed) {
-        if (threadCollapsed && latestId != null) {
-             return [Enumerable.From(comments).Where('t=>t.id==' + latestId).FirstOrDefault()];
-        }
-        // if less than 3 replies we just show it all
-        if (comments == null || comments.length < 3) return comments;
-        // if no replies we return empty array
-        if (take == 0 && !showUnAnsweredReplies && comments.length == 0) return [];
-        // if user clicked "show unanswered replies"
-        if (showUnAnsweredReplies) {
-            var result = [];
-            angular.forEach(comments, function (value, key) {
-                if (value.comments.length > 0) {
-                    var comment = Enumerable.From(value.comments).LastOrDefault();
-                    if (!comment.isFromStaff) {
-                        value.showBold = true;
-                        result.push(value);
-                    }
-                }
-            });
-
-            return result;
-        }
-
-        // if less that 10 replies than we dont need paging
-        if (comments.length < 10) return comments;
-        // run paging for more than 10 replies
-        return Enumerable.From(comments).TakeFromLast(take).ToArray();
+}).filter('exclude', function () {
+    return function (allTags, selectedTags) {
+        return Enumerable.From(allTags).TakeFromLast(take).ToArray();
     };
 }).filter('capitalize', function () {
     return function (input) {
