@@ -11,8 +11,8 @@
     <link href="https://fontastic.s3.amazonaws.com/HCMCBd5ToJQCErxqRK2JW/icons.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container" style="max-width: 1050px">
-        <div class="col-md-3 left-menu">
+    <div class="container" style="max-width: 750px">
+        @* <div class="col-md-3 left-menu">
             <h2>FILMGRAIL</h2>
             <br />
             <div class="list-group">
@@ -27,11 +27,12 @@
                 <a class="list-group-item">Profile
                 </a>
             </div>
-        </div>
-        <div class="col-md-9" ng-controller="feedCtrl" style="padding-top: 20px">
-            <input ui-select2="tagOptions" placeholder="Search or select tags..." ng-model="tags" style="margin-bottom: 5px; margin-top: 5px">
+        </div>*@
+        <h3 class="text-center">FILMGRAIL</h3>
+        <div class="col-md-12" ng-controller="feedCtrl" style="padding-top: 20px">
+            <input ui-select2="tagOptions" placeholder="Search..." ng-model="tags" style="margin-bottom: 5px; margin-top: 5px;text-align: center;">
 
-            <label ng-click="addTag(tag)" class="label label-info pointer" style="padding: 6px; margin-left: 5px" ng-repeat="tag in tagList">{{tag}}</label>
+            <label ng-click="addTag(tag)" class="label label-simple pointer" style="padding: 6px; margin-left: 5px" ng-repeat="tag in tagList">{{tag}}</label>
             <hr />
             <div class="row">
                 <div class="col-sm-4 col-xs-6" ng-repeat="movie in feed" style="margin-bottom: 25px;height: 340px;">

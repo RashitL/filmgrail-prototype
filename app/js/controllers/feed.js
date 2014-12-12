@@ -6,7 +6,7 @@
          });
 
       // init tags
-      $scope.tagList = ["2014", "Action", "Drama", "Comedy", "Liked by friends", "High rating", "On TV", "In cinemas", "On NetFlix"];
+      $scope.tagList = ["2014", "Action", "Drama", "Comedy", "Liked by friends", "High rating", "On TV", "In cinemas", "On NetFlix", "more..."];
       $scope.tags = [];
       $scope.tagOptions = {
           tags: function (query) {
@@ -16,11 +16,16 @@
           multiple: true,
           initSelection: function (element, callback) {
               callback($scope.tags);
-          },
-          width: "730px"
+          }
       };
 
       $scope.addTag = function (tag) {
+          if (tag == "more...") {
+              $scope.tagList.splice($scope.tagList.indexOf(tag), 1);
+              $scope.tagList = $scope.tagList.slice().concat(["Q.Tarantino", "J.Depp"]);
+              return;
+          }
+
           var tags = [{ id: tag, text: tag }].concat($scope.tags.reverse()).reverse();
           $scope.tags = tags;
 

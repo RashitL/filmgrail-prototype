@@ -334,7 +334,12 @@ a:link
 .select2-container.select2-container-multi
 {
     width: auto!important;
-    min-width: 100px!important;
+    min-width: 687px!important;
+}
+
+.select2-container.select2-container-multi input
+{
+    text-align: center;
 }
 
 .left-menu {
