@@ -7,6 +7,7 @@
 
       // init tags
       $scope.tagList = ["2014", "Action", "Drama", "Comedy", "Liked by friends", "High rating", "On TV", "In cinemas", "On NetFlix", "more..."];
+      $scope.subTagList = [];
       $scope.tags = [];
       $scope.tagOptions = {
           tags: function (query) {
@@ -19,10 +20,23 @@
           }
       };
 
-      $scope.addTag = function (tag) {
+      $scope.addTag = function (tag, subTag) {
           if (tag == "more...") {
               $scope.tagList.splice($scope.tagList.indexOf(tag), 1);
               $scope.tagList = $scope.tagList.slice().concat(["Q.Tarantino", "J.Depp"]);
+              return;
+          }
+          
+          if (tag == "Action") {
+              $scope.subTagList = ["A bit of action", "Action movie", "Lots of action"];
+              return;
+          }
+          if (tag == "Drama") {
+              $scope.subTagList = ["A bit of Drama", "Drama movie", "Make me cry"];
+              return;
+          }
+          if (tag == "Comedy") {
+              $scope.subTagList = ["A bit of Comedy", "Comedy movie", "Super funny"];
               return;
           }
 
@@ -30,6 +44,10 @@
           $scope.tags = tags;
 
           $scope.feed = Enumerable.From($scope.feed).Shuffle().ToArray();
-
+          if (subTag) {
+              $scope.subTagList = [];
+          }
       };
+      
+
   }]);
