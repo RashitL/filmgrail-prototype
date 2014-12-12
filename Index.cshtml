@@ -31,14 +31,16 @@
         <h3 class="text-center">FILMGRAIL</h3>
         <div class="col-md-12" ng-controller="feedCtrl" style="padding-top: 20px">
             <input ui-select2="tagOptions" placeholder="Search..." ng-model="tags" style="margin-bottom: 5px; margin-top: 5px; text-align: center;">
-            <label ng-click="addTag(tag)" class="label label-simple pointer movie-tag" ng-class="{'tag-opacity':subTagList.length>0}" style="padding: 6px; margin-left: 5px" ng-repeat="tag in tagList">{{tag}}</label>
+            <div style="overflow-x: auto; overflow-y: hidden;">
+                <label ng-click="addTag(tag)" class="label label-simple pointer movie-tag" ng-class="{'tag-opacity':subTagList.length>0}" style="padding: 6px; margin-left: 5px" ng-repeat="tag in tagList">{{tag}}</label>
+            </div>
             <label ng-click="addTag(tag, true)" class="label label-simple pointer" style="padding: 6px; margin-left: 5px" ng-repeat="tag in subTagList">{{tag}}</label>
             <hr style="margin-bottom: 0" />
             <p class="" style="line-height: 40px; font-size: 75%; padding-left: 10px; margin-bottom: 0; color: #999;">
                 {{300544/((tags.length+1)*2) | number:0 }} movies found
             </p>
             <div class="row">
-                <div class="col-sm-4 col-xs-6" ng-repeat="movie in feed" style="margin-bottom: 25px; height: 320px;">
+                <div class="col-sm-4 col-xs-12 movie-card" ng-repeat="movie in feed" style="margin-bottom: 25px;">
                     <div style="margin-bottom: -30px; padding: 7px; opacity: 0.7; background: black; height: 30px;">
                         <div class="row">
                             <div class="col-xs-12">
