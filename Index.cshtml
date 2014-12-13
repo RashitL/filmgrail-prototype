@@ -28,7 +28,14 @@
                 </a>
             </div>
         </div>*@
-        <h3 class="text-center">FILMGRAIL</h3>
+        <h3 style="background: rgb(76, 76, 76); color: #aaa; margin-top: 0; padding: 15px;margin-bottom: 0;">FILMGRAIL
+            <div class="pull-right">
+                <span style="color: #f0f0f0">search</span>
+                <span style="padding-left: 7px;">my movies</span>
+                <span style="padding-left: 7px">activity(2)</span>
+                <span style="padding-left: 7px">profile</span>
+            </div>
+        </h3>
         <div class="col-md-12" ng-controller="feedCtrl" style="padding-top: 20px">
             <input ui-select2="tagOptions" placeholder="Search..." ng-model="tags" style="margin-bottom: 5px; margin-top: 5px; text-align: center;">
             <div style="overflow-x: auto; overflow-y: hidden;">
@@ -38,6 +45,9 @@
             <hr style="margin-bottom: 0" />
             <p class="" style="line-height: 40px; font-size: 75%; padding-left: 10px; margin-bottom: 0; color: #999;">
                 {{300544/((tags.length+1)*2) | number:0 }} movies found
+                <select class="label label-default pull-right" style="font-size: 100%;margin-top: 10px">
+                    <option>Local providers, TV, Cinemas</option>
+                </select>
             </p>
             <div class="row">
                 <div class="col-sm-4 col-xs-12 movie-card" ng-repeat="movie in feed" style="margin-bottom: 25px;">
