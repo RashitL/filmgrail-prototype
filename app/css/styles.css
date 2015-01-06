@@ -377,3 +377,34 @@ a:link
     -moz-opacity: 0.5;
     -webkit-opacity: 0.5;
 }
+
+.top-nav a {
+    color: #aaaaaa;
+}
+
+.top-nav a.active{
+    color: #f0f0f0;
+}
+
+.list-group {
+    font-size: 75%;
+    color: #999;
+    cursor: pointer;
+}
+.list-group a{
+    font-size: 75%;
+}
+
+.list-group .active,.list-group :hover {
+    color: #333;
+}
+
+.list-group .list-group-item {
+    padding-right: 0;
+}
+
+.icon-search-metro{
+    font-size: 75%;
+    color: #aaaaaa;
+    padding-top: 4px;
+}

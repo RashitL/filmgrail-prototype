@@ -1,0 +1,86 @@
+﻿<div class="top10" ng-controller="feedCtrl">
+    <div class="col-xs-12" ng-show="showSearch">
+        <input ui-select2="tagOptions" placeholder="Search..." ng-model="tags" style="margin-bottom: 5px; margin-top: 5px; text-align: center;">
+        <div style="overflow-x: auto; overflow-y: hidden;">
+            <label ng-click="addTag(tag)" class="label label-simple pointer movie-tag" ng-class="{'tag-opacity':subTagList.length>0}" style="padding: 6px; margin-left: 5px" ng-repeat="tag in tagList">{{tag}}</label>
+        </div>
+        <label ng-click="addTag(tag, true)" class="label label-simple pointer" style="padding: 6px; margin-left: 5px" ng-repeat="tag in subTagList">{{tag}}</label>
+    </div>
+    <div class="col-md-8">
+        <h4><a ng-click="showSearch=!showSearch"><i class="icon-search"></i></a>&nbsp;My watchlist <i class="pull-right icon-align-justify"></i></h4>
+
+        <div class="row">
+            <div class="col-sm-6 col-xs-12 movie-card" ng-repeat="movie in feed" style="margin-bottom: 25px;">
+                <div ng-include="'app/partials/movie.cshtml'"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h4>My collections</h4>
+        <ul class="list-group">
+            <li class="list-group-item active">
+                <span class="badge">25</span>
+                My watchlist
+            </li>
+            <li class="list-group-item">
+                <span class="badge">3</span>
+                Liked movies
+            </li>
+            <li class="list-group-item">
+                <span class="badge">2</span>
+                Categorized
+            </li>
+            <li class="list-group-item">
+                <span class="badge">8</span>
+                Shared with me
+            </li>
+            <li class="list-group-item">
+                <span class="badge">8</span>
+                Best old movies <span tooltip="234 followers" tooltip-placement="top" data-toggle="tooltip"> <i class="icon-users"></i>&nbsp;234</span>
+            </li>
+            <li class="list-group-item">+ add new collection
+            </li>
+        </ul>
+        <h4>Recommended<i class="icon-search-metro pull-right"></i></h4>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <span class="badge">25</span>
+                Lazy sunday
+                <a href="#" class="btn-block">Filmgrail</a>
+            </li>
+            <li class="list-group-item">
+                <span class="badge">3</span>
+                Shit scary movies
+                <span tooltip="55 followers" tooltip-placement="top" data-toggle="tooltip"> <i class="icon-users"></i>&nbsp;55</span>
+                <a href="#" class="btn-block">John Malcovich</a>
+            </li>
+            <li class="list-group-item">
+                <span class="badge">25</span>
+                Best xmass movies.
+                <span tooltip="234 followers" tooltip-placement="top" data-toggle="tooltip"> <i class="icon-users"></i>&nbsp;234</span>
+                <a href="#" class="btn-block">Petter Sundby</a>
+            </li>
+        </ul>
+        <h4>Friends <i class="icon-search-metro pull-right"></i></h4>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <span class="badge">25</span>
+                My favorite movies
+                <span tooltip="3 followers" tooltip-placement="top" data-toggle="tooltip"> <i class="icon-users"></i>&nbsp;3</span>
+                <a href="#" class="btn-block">Simon Strumse</a>
+            </li>
+            <li class="list-group-item">
+                <span class="badge">3</span>
+                My top 10 action movies
+                <span tooltip="5 followers" tooltip-placement="top" data-toggle="tooltip"> <i class="icon-users"></i>&nbsp;5</span>
+                <a href="#" class="btn-block">Inge Sandvik</a>
+            </li>
+            <li class="list-group-item">
+                <span class="badge">25</span>
+                Movies to watch with GF
+                <span tooltip="234 followers" tooltip-placement="top" data-toggle="tooltip"> <i class="icon-users"></i>&nbsp;234</span>
+                <a href="#" class="btn-block">Kim Hinsdal</a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -7,12 +7,17 @@
 
 app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
     $stateProvider
-        .state('feed', {
+        .state("feed", {
             url: "/feed",
-            templateUrl: 'app/partials/feed.cshtml'
+            templateUrl: "app/partials/feed.cshtml",
+            controller: 'feedCtrl'
+        }).state("movies", {
+            url: "/movies",
+            templateUrl: "app/partials/movies.cshtml",
+            
         });
 
-    $urlRouterProvider
-         // If the url is ever invalid, e.g. '/asdf', then redirect to '/' aka the home state
-         .otherwise('/feed');
+    //$urlRouterProvider
+    //     // If the url is ever invalid, e.g. '/asdf', then redirect to '/' aka the home state
+    //     .otherwise('/feed');
 }]);

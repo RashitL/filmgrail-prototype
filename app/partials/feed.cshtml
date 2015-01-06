@@ -1,25 +1,19 @@
-﻿<h2>Feed <i class="pull-right icon-align-justify"></i></h2>
-<br />
-<div class="well well-sm" ng-repeat="movie in feed">
-    <div class="media">
-        <div class="media pull-left" href="#">
-            <div>
-                <div>
-                    <i class="icon-plus pointer" style="position: absolute; padding-left: 160px; padding-top: 10px;"></i>
-                    <img ng-src="https://image.tmdb.org/t/p/w185{{movie.PosterPath}}" alt="..." />
-                </div>
-                <div>
-                    <a href="#" class="btn btn-sm btn-default" style="width: 49%"><i class="icon-thumbs-down red"></i>&nbsp;</a>
-                    <a href="#" class="btn btn-sm btn-default" style="width: 49%"><i class="icon-thumbs-up text-success"></i>&nbsp;</a>
-                </div>
-            </div>
-        </div>
-        <div class="media-body">
-            <h4 class="media-heading">{{movie.Title}}, {{movie.ProductionYear}} <span class="label label-default pull-right">IMDB: {{movie.Rating | number:1}}</span></h4>
-            <p>Simon, Inge and 34 others liked</p>
-            <p>Simon 4 others commented</p>
-            @*{{movie|json}}*@
+﻿<div class="col-md-12" style="padding-top: 20px">
+    <input ui-select2="tagOptions" placeholder="Search..." ng-model="tags" style="margin-bottom: 5px; margin-top: 5px; text-align: center;">
+    <div style="overflow-x: auto; overflow-y: hidden;">
+        <label ng-click="addTag(tag)" class="label label-simple pointer movie-tag" ng-class="{'tag-opacity':subTagList.length>0}" style="padding: 6px; margin-left: 5px" ng-repeat="tag in tagList">{{tag}}</label>
+    </div>
+    <label ng-click="addTag(tag, true)" class="label label-simple pointer" style="padding: 6px; margin-left: 5px" ng-repeat="tag in subTagList">{{tag}}</label>
+    <hr style="margin-bottom: 0" />
+    <p class="" style="line-height: 40px; font-size: 75%; padding-left: 10px; margin-bottom: 0; color: #999;">
+        {{300544/((tags.length+1)*2) | number:0 }} movies found
+                <select class="label label-default pull-right" style="font-size: 100%; margin-top: 10px">
+                    <option>Local providers, TV, Cinemas</option>
+                </select>
+    </p>
+    <div class="row">
+        <div class="col-sm-4 col-xs-12 movie-card" ng-repeat="movie in feed" style="margin-bottom: 25px;">
+            <div ng-include="'app/partials/movie.cshtml'"></div>
         </div>
     </div>
-
 </div>
