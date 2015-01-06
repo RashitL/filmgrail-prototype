@@ -6,8 +6,9 @@
          });
 
       // init tags
-      $scope.tagList = ["2014", "Action", "Drama", "Comedy", "High rating", "Liked by friends", "Shared by friends", "Sport", "more..."];
-      $scope.fulLTagList = ["2014", "A bit of action", "Action movie", "Lots of action", "A bit of Drama", "Drama movie", "Make me cry", "A bit of Comedy", "Comedy movie", "Super funny", "High rating", "Liked by friends", "Shared by friends", "Sport", "Action with comedy", "Nolan"];
+      $scope.genres = ["Action", "Drama", "Comedy", "Romantic", "Horror", "Musical", "Sci-Fi/ Fantasy"];
+      $scope.tagList = ["Sport", "Documentary", "For kids","X-mass","High-tech", "C.Nolan", "J.Depp", "C.Bale"];
+      $scope.fulLTagList = ["2014", "Action - low", "Action - medium", "Action - high", "Drama - low", "Drama - medium", "Drama - high", "Comedy - low", "Comedy - medium", "Comedy - high", "High rating", "Liked by friends", "Shared by friends", "Sport", "Action with comedy", "Nolan"];
       $scope.subTagList = [];
       $scope.tags = [];
       $scope.tagOptions = {
@@ -29,21 +30,27 @@
           }
 
           if (tag == "Action") {
-              $scope.subTagList = ["A bit of action", "Action movie", "Lots of action"];
+              $scope.subTagList = ["Action - low", "Action - medium", "Action - high"];
               return;
           }
           if (tag == "Drama") {
-              $scope.subTagList = ["A bit of Drama", "Drama movie", "Make me cry"];
+              $scope.subTagList = ["Drama - low", "Drama - medium", "Drama - high"];
               return;
           }
           if (tag == "Comedy") {
-              $scope.subTagList = ["A bit of Comedy", "Comedy movie", "Super funny"];
+              $scope.subTagList = ["Comedy - low", "Comedy - medium", "Comedy - high"];
               return;
           }
 
           var tags = [{ id: tag, text: tag }].concat($scope.tags.reverse()).reverse();
           $scope.tags = tags;
 
+          $scope.feed = Enumerable.From($scope.feed).Shuffle().ToArray();
+          $scope.subTagList = [];
+      };
+
+      $scope.resetTags = function () {
+          $scope.tags = [];
           $scope.feed = Enumerable.From($scope.feed).Shuffle().ToArray();
           $scope.subTagList = [];
       };

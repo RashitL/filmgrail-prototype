@@ -11,6 +11,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: "/feed",
             templateUrl: "app/partials/feed.cshtml",
             controller: 'feedCtrl'
+        }).state("feed2", {
+            url: "/feed2",
+            templateUrl: "app/partials/feed2.cshtml",
+            controller: 'feedCtrl'
         }).state("movies", {
             url: "/movies",
             templateUrl: "app/partials/movies.cshtml",
