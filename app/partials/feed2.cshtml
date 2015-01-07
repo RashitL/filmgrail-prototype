@@ -1,13 +1,13 @@
 ﻿<div class="row" style="border: 1px #f0f0f0 solid; margin: 0">
     <input ui-select2="tagOptions" placeholder="Search..." ng-model="tags" style="margin-bottom: 5px; margin-top: 5px; text-align: center;">
-    <div class="col-md-8">
+    <div class="col-md-8" style="background: #E9E9E9">
         <p class="" style="line-height: 40px; font-size: 75%; margin-bottom: 0; color: #999;">
             {{300544/((tags.length+1)*2) | number:0 }} movies found
             @*<a class=" pull-right" style="font-size: 100%" ng-show="tags.length>0" ng-click="">reset</a>*@
         </p>
-        <div class="row">
-            <div class="col-sm-6 col-xs-12 movie-card" ng-repeat="movie in feed" style="margin-bottom: 25px;">
-                <div ng-include="'app/partials/movie.cshtml'"></div>
+        <div class="row" style="padding-right: 15px">
+            <div class="col-sm-6 col-xs-12 movie-card" ng-repeat="movie in feed" style="margin-bottom: 25px;padding-right: 0">
+                <div ng-include="'app/partials/movie2.cshtml'"></div>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
         <div style="margin-bottom: 10px">
             <span style="line-height: 1.7;">Provider</span>
             <div class="btn-group btn-group-xs pull-right" role="group" aria-label="Extra-small button group">
-                <label ng-click="addTag('On Netflix, iTunes or Viaplay')" class="btn btn-default" ng-model="Provider1" btn-checkbox="'low'"  tooltip="Netflix, iTunes, Viaplay" tooltip-placement="top" data-toggle="tooltip">Sources</label>
+                <label ng-click="addTag('On Netflix, iTunes or Viaplay')" class="btn btn-default" ng-model="Provider1" btn-checkbox="'low'"  tooltip="Netflix, iTunes, Viaplay" tooltip-placement="top" data-toggle="tooltip">Streaming</label>
                 <label ng-click="addTag('Airing on TV')" class="btn btn-default" ng-model="Provider2" btn-checkbox="'medium'" >TV</label>
                 <label ng-click="addTag('In cinemas')" class="btn btn-default" ng-model="Provider3" btn-checkbox="'high'" >Cinema</label>
             </div>
@@ -31,9 +31,9 @@
         <div style="margin-bottom: 10px">
             <span style="line-height: 1.7;">IMDB rating</span>
             <div class="btn-group btn-group-xs pull-right" role="group" aria-label="Extra-small button group">
-                <label ng-click="addTag('IMDB - low')" class="btn btn-default" ng-model="IMDBrating1" btn-checkbox="'low'" >low</label>
-                <label ng-click="addTag('IMDB - medium')" class="btn btn-default" ng-model="IMDBrating2" btn-checkbox="'medium'" >medium</label>
-                <label ng-click="addTag('IMDB - high')" class="btn btn-default" ng-model="IMDBrating3" btn-checkbox="'high'" >high</label>
+                <label ng-click="addTag('IMDB - 6.0>')" class="btn btn-default" ng-model="IMDBrating1" btn-checkbox="'low'" >6.0></label>
+                <label ng-click="addTag('IMDB - 7.0>')" class="btn btn-default" ng-model="IMDBrating2" btn-checkbox="'medium'" >7.0></label>
+                <label ng-click="addTag('IMDB - 8.0>')" class="btn btn-default" ng-model="IMDBrating3" btn-checkbox="'high'" >8.0></label>
             </div>
         </div>
         <div style="margin-bottom: 10px">
@@ -50,7 +50,7 @@
             <div class="btn-group btn-group-xs pull-right" role="group" aria-label="Extra-small button group">
                 <label ng-click="addTag(genre+' - low')" class="btn btn-default" ng-model="radioModel" btn-radio="'low'" uncheckable>low</label>
                 <label ng-click="addTag(genre+' - medium')" class="btn btn-default" ng-model="radioModel" btn-radio="'medium'" uncheckable>medium</label>
-                <label ng-click="addTag(genre+' - high')" class="btn btn-default" ng-model="radioModel" btn-radio="'high'" uncheckable>high</label>
+                <label ng-click="addTag(genre+' - high')" class="btn btn-default" ng-model="radioModel" uncheckable btn-radio="'high'" uncheckable>high</label>
             </div>
         </div>
 

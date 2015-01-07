@@ -1,0 +1,48 @@
+﻿<div data-component-type="0" class="" style="font-size: 11px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgba(0, 0, 0, 0.219608); border-radius: 6px; background: rgb(255, 255, 255);">
+    <div class="" style="border-radius: 6px;">
+        <div class="">
+            <div class="">
+                <a href="#" class="" data-element-type="35" style="color: rgb(113, 113, 113); font-weight: bold; text-decoration: none; border-radius: 6px 6px 0px 0px; display: block; padding: 0px; background: rgb(1, 0, 5);">
+                    <div class="">
+                        <img ng-src="https://image.tmdb.org/t/p/w185{{movie.PosterPath}}" class="" alt="72 Fan-Made Film Posters - From Defaced Film Posters to Zombified Movie Homages (TOPLIST)" style="max-width: 100%; vertical-align: middle; border: 0px; display: block; margin: 0px auto; border-radius: 6px 6px 0px 0px; width: 236px;">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(224, 224, 224);">
+            <a href="http://www.pinterest.com/pin/103301385178838996/" class="" style="color: rgb(113, 113, 113); font-weight: bold; text-decoration: none; overflow: hidden; display: block; padding: 5px 12px 6px;">
+                <span class="" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: rgb(170, 170, 170); float: left; font-weight: normal; margin: 9px 7px 7px 5px; max-width: 180px; overflow: hidden; clear: both; color: #444; font-size: 14px; font-weight: bold; margin: 0; max-height: 68px; padding: 4px 0 4px;">{{movie.Title}}</span>
+            </a>
+        </div>
+        <div class="" style="padding: 6px 14px 7px;">
+            <p class="" style="color: rgb(51, 51, 51); font-size: 13px; line-height: 17px; word-wrap: break-word; margin: 5px 0px; padding: 0px;">
+                <span ng-show="movie.Likes.length==0">Similar to "Lord of the Rings"</span>
+                <span ng-show="movie.Likes.length==1">Norit likes it"</span>
+                <span ng-show="movie.Likes.length==2">Inge and Simon like it</span>
+                <span ng-show="movie.Likes.length>2">Inge shared it, Simon, Jarle and 3 other friends like it"</span>
+            </p>
+        </div>
+        @* <div class="" style="font-family: Helvetica, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', sans-serif; font-weight: bold; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(231, 231, 231); color: rgb(119, 119, 119);">
+            <div class="" data-element-type="282" style="border-radius: 0px 0px 6px 6px;">
+                <div class="" style="overflow: hidden; border-radius: 0px 0px 6px 6px; line-height: 15px; padding: 10px 12px;">
+                    <a href="http://www.pinterest.com/madsenlarsen/heroes-and-movies/" style="color: rgb(113, 113, 113); text-decoration: none;">
+                        <img src="http://media-cache-ak0.pinimg.com/upload/103301453891860844_board_thumbnail_2014-12-15-20-12-47_90613_60.jpg" class="" alt="Heroes and Movies" style="max-width: 100%; height: 30px; vertical-align: middle; border: 0px; border-radius: 2px; float: left; margin-right: 5px; width: 30px;">
+                        <div class="" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 150px;">7 friends liked it</div>
+                        <div class="" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: rgb(183, 183, 183); width: 150px;">Heroes and Movies</div>
+                    </a>
+                </div>
+            </div>
+        </div>*@
+        <div class="" style="font-family: Helvetica, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', sans-serif; font-weight: bold; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(231, 231, 231); color: rgb(119, 119, 119);">
+            <div class="" data-element-type="282" style="border-radius: 0px 0px 6px 6px;">
+                <div class="" style="overflow: hidden; border-radius: 0px 0px 6px 6px; line-height: 15px; padding: 10px 12px;">
+                    <div class="row">
+                        <div class="col-xs-4 text-center pointer"><i class="icon-heart-empty">&nbsp;{{movie.Likes.length | nullIfZero}}</i></div>
+                        <div class="col-xs-4 text-center pointer"><i class="icon-comment-alt">&nbsp;2</i></div>
+                        <div class="col-xs-4 text-center pointer"><i class="icon-share-alt">&nbsp;1</i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
