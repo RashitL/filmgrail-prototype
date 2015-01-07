@@ -5,8 +5,8 @@
             {{300544/((tags.length+1)*2) | number:0 }} movies found
             @*<a class=" pull-right" style="font-size: 100%" ng-show="tags.length>0" ng-click="">reset</a>*@
         </p>
-        <div class="row" style="padding-right: 15px">
-            <div class="col-sm-6 col-xs-12 movie-card" ng-repeat="movie in feed" style="margin-bottom: 25px;padding-right: 0">
+        <div id="columns">
+            <div class="pin movie-card" ng-repeat="movie in feed" style="margin-bottom: 25px;padding-right: 0">
                 <div ng-include="'app/partials/movie2.cshtml'"></div>
             </div>
         </div>
