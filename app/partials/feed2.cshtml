@@ -48,9 +48,9 @@
         <div ng-repeat="genre in genres" style="margin-bottom: 10px">
             <span style="line-height: 1.7;">{{genre}}</span>
             <div class="btn-group btn-group-xs pull-right" role="group" aria-label="Extra-small button group">
-                <label ng-click="addTag(genre+' - low')" class="btn btn-default" ng-model="radioModel" btn-radio="'low'" uncheckable>low</label>
-                <label ng-click="addTag(genre+' - medium')" class="btn btn-default" ng-model="radioModel" btn-radio="'medium'" uncheckable>medium</label>
-                <label ng-click="addTag(genre+' - high')" class="btn btn-default" ng-model="radioModel" uncheckable btn-radio="'high'" uncheckable>high</label>
+                <label tooltip="{{genre}}- low" tooltip-placement="left" data-toggle="tooltip" ng-click="addTag(genre+' - low')" class="btn btn-default" ng-model="radioModel" btn-radio="'low'" uncheckable style="padding-top: 4px; width: 30px;height: 20px;"><i class="icon-dot"></i></label>
+                <label tooltip="{{genre}}- medium" tooltip-placement="bottom" data-toggle="tooltip" ng-click="addTag(genre+' - medium')" class="btn btn-default" ng-model="radioModel" btn-radio="'medium'" uncheckable style="padding-top: 4px; width: 30px;height: 20px;"><i class="icon-dot-2"></i></label>
+                <label tooltip="{{genre}}- high" tooltip-placement="right" data-toggle="tooltip" ng-click="addTag(genre+' - high')" class="btn btn-default" ng-model="radioModel" uncheckable btn-radio="'high'" uncheckable style="padding-top: 4px; width: 30px;height: 20px;"><i class="icon-dot-3"></i></label>
             </div>
         </div>
 

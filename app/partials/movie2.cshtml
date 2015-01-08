@@ -13,21 +13,48 @@
             <a href="http://www.pinterest.com/pin/103301385178838996/" class="" style="color: rgb(113, 113, 113); text-decoration: none; overflow: hidden; display: block; padding: 5px 12px 6px;">
                 <div class="ellipsis" style="font-weight: bold; color: rgb(170, 170, 170); font-weight: normal; margin: 9px 7px 7px 5px; max-width: 180px; overflow: hidden; clear: both; color: #444; font-size: 12px; font-weight: bold; margin: 0; max-height: 68px; padding: 4px 0 4px;">{{movie.Title}}</div>
                 <div>
-                    <span class="" style="font-size: 10px; color: rgb(183, 183, 183);">{{movie.ProductionYear}}&nbsp;IMDB {{movie.Rating | number:1}}</span>
-                    <i tooltip="Avaialbe on Netflix and ITunes" tooltip-placement="top" data-toggle="tooltip" ng-show="movie.Likes.length>0" class="icon-signal pull-right"></i>
-                    <i tooltip="Airing on NRK2 tomorrow 21:00" tooltip-placement="top" data-toggle="tooltip" ng-show="movie.Likes.length>1" class="icon-television-tv pull-right"></i>
-                    <i tooltip="Avaialbe in cinemas" tooltip-placement="top" data-toggle="tooltip" ng-show="movie.Likes.length>2" class="icon-cinema pull-right"></i>
+                    <span class="" style="font-size: 10px; color: rgb(120, 120, 120);">{{movie.ProductionYear}},&nbsp;IMDB {{movie.Rating | number:1}}</span>
+                    <i tooltip="Avaialbe on Netflix and ITunes" tooltip-placement="top" data-toggle="tooltip" ng-show="movie.Likes.length>0" class="icon-signal pull-right" style="color: #008cba"></i>
+                    <i tooltip="Airing on NRK2 tomorrow 21:00" tooltip-placement="top" data-toggle="tooltip" ng-show="movie.Likes.length>1" class="icon-television-tv pull-right" style="color: #008cba"></i>
+                    <i tooltip="Avaialbe in cinemas" tooltip-placement="top" data-toggle="tooltip" ng-show="movie.Likes.length>2" class="icon-cinema pull-right" style="color: #008cba"></i>
                 </div>
+
             </a>
         </div>
-        <div class="" style="padding: 6px 14px 7px;">
+        <div class="movie-tag-on-card" style="padding: 5px 12px 6px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(224, 224, 224);">
+            @*<div style="font-size: 10px; color: rgb(120, 120, 120);" ng-show="movie.Likes.length==0">
+                Drama, action, comedy
+            </div>
+            <div style="font-size: 10px; color: rgb(120, 120, 120);" ng-show="movie.Likes.length==1">
+                Action, comedy
+            </div>
+            <div style="font-size: 10px; color: rgb(120, 120, 120);" ng-show="movie.Likes.length==2">
+                Horror, action, Sci-Fi/fantasy
+            </div>
+            <div style="font-size: 10px; color: rgb(120, 120, 120);" ng-show="movie.Likes.length>2">
+                Drama
+            </div>*@
+            <a ng-click="addTag('Drama')" class="btn btn-link btn-xs ng-scope ng-binding" ng-class="{'tag-opacity':subTagList.length>0}" style="margin: 0" ng-show="movie.Likes.length==0">#Drama</a>
+            <a ng-click="addTag('Action')" class="btn btn-link btn-xs ng-scope ng-binding" ng-class="{'tag-opacity':subTagList.length>0}" style="margin: 0" ng-show="movie.Likes.length==1">#Action</a>
+            <a ng-click="addTag('Comedy')" class="btn btn-link btn-xs ng-scope ng-binding" ng-class="{'tag-opacity':subTagList.length>0}" style="margin: 0" ng-show="movie.Likes.length==2">#Comedy</a>
+            <a ng-click="addTag('X-mass')" class="btn btn-link btn-xs ng-scope ng-binding" ng-class="{'tag-opacity':subTagList.length>0}" style="margin: 0" ng-show="movie.Likes.length==2">#X-mass</a>
+            <a ng-click="addTag('High-tech')" class="btn btn-link btn-xs ng-scope ng-binding" ng-class="{'tag-opacity':subTagList.length>0}" style="margin: 0" ng-show="movie.Likes.length==1">#High-tech</a>
+            <a ng-click="addTag('C.Nolan')" class="btn btn-link btn-xs ng-scope ng-binding" ng-class="{'tag-opacity':subTagList.length>0}" style="margin: 0" ng-show="movie.Likes.length==1">#C.Nolan</a>
+            <a ng-click="addTag('C.Bale')" class="btn btn-link btn-xs ng-scope ng-binding" ng-class="{'tag-opacity':subTagList.length>0}" style="margin: 0" ng-show="movie.Likes.length==0">#C.Bale</a>
+            <a ng-click="addTag('Sport')" class="btn btn-link btn-xs ng-scope ng-binding" ng-class="{'tag-opacity':subTagList.length>0}" style="margin: 0" ng-show="movie.Rating>7">#Sport</a>
+            <a ng-click="addTag('Boxing')" class="btn btn-link btn-xs ng-scope ng-binding" ng-class="{'tag-opacity':subTagList.length>0}" style="margin: 0" ng-show="movie.Rating>8">#Boxing</a>
+            <a ng-click="addTag('Crazy')" class="btn btn-link btn-xs ng-scope ng-binding" ng-class="{'tag-opacity':subTagList.length>0}" style="margin: 0" ng-show="movie.Rating<7">#Crazy</a>
+        </div>
+        <div class="" style="padding: 5px 12px 6px">
             <p class="" style="color: rgb(51, 51, 51); font-size: 11px; line-height: 17px; word-wrap: break-word; margin: 5px 0px; padding: 0px;">
                 <span ng-show="movie.Likes.length==0">Similar to "Lord of the Rings"</span>
                 <span ng-show="movie.Likes.length==1">Norit likes it"</span>
                 <span ng-show="movie.Likes.length==2">Inge and Simon like it</span>
                 <span ng-show="movie.Likes.length>2">Inge shared it, Simon, Jarle and 3 other friends like it"</span>
             </p>
+
         </div>
+
         @* <div class="" style="font-family: Helvetica, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', sans-serif; font-weight: bold; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(231, 231, 231); color: rgb(119, 119, 119);">
             <div class="" data-element-type="282" style="border-radius: 0px 0px 6px 6px;">
                 <div class="" style="overflow: hidden; border-radius: 0px 0px 6px 6px; line-height: 15px; padding: 10px 12px;">
@@ -41,11 +68,11 @@
         </div>*@
         <div class="" style="font-family: Helvetica, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', sans-serif; font-weight: bold; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(231, 231, 231); color: rgb(119, 119, 119);">
             <div class="" data-element-type="282" style="border-radius: 0px 0px 6px 6px;">
-                <div class="" style=" border-radius: 0px 0px 6px 6px; line-height: 15px; padding: 10px 12px;">
+                <div class="" style="border-radius: 0px 0px 6px 6px; line-height: 15px; padding: 10px 12px;">
                     <div class="row">
-                        <div class="col-xs-4 text-center pointer"><i class="icon-heart-empty">&nbsp;{{movie.Likes.length | nullIfZero}}</i></div>
-                        <div class="col-xs-4 text-center pointer"><i class="icon-comment-alt">&nbsp;2</i></div>
-                        <div class="col-xs-4 text-center pointer"><i class="icon-share-alt">&nbsp;1</i></div>
+                        <div tooltip="Like it" tooltip-placement="bottom" data-toggle="tooltip" class="col-xs-4 text-center pointer"><i class="icon-heart-empty">&nbsp;{{movie.Likes.length | nullIfZero}}</i></div>
+                        <div tooltip="Comment it" tooltip-placement="bottom" data-toggle="tooltip" class="col-xs-4 text-center pointer"><i class="icon-comment-alt">&nbsp;2</i></div>
+                        <div tooltip="Share or send to a friend" tooltip-placement="bottom" data-toggle="tooltip" class="col-xs-4 text-center pointer"><i class="icon-share-alt">&nbsp;1</i></div>
                     </div>
                 </div>
             </div>

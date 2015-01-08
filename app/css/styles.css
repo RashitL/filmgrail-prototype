@@ -73,7 +73,7 @@ html, body {
     height: auto;
 }
 
-    
+
 
 @media (max-width: 768px) {
     .movie-card {
@@ -373,9 +373,9 @@ a:link {
 }
 
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
-color: #f0f0f0;
-background-color: #008cba;
-border-color: #008cba;
+    color: #f0f0f0;
+    background-color: #008cba;
+    border-color: #008cba;
 }
 
 
@@ -384,20 +384,28 @@ border-color: #008cba;
 
 
 #columns {
-	-webkit-column-count: 2;
-	-webkit-column-gap: 10px;
-	-webkit-column-fill: auto;
-	-moz-column-count: 2;
-	-moz-column-gap: 10px;
-	-moz-column-fill: auto;
-	column-count: 2;
-	column-gap: 15px;
-	column-fill: auto;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 10px;
+    -webkit-column-fill: auto;
+    -moz-column-count: 2;
+    -moz-column-gap: 10px;
+    -moz-column-fill: auto;
+    column-count: 2;
+    column-gap: 15px;
+    column-fill: auto;
 }
 
 .pin {
-	display: inline-block;
-	
+    display: inline-block;
 }
 
+[class^="icon-dot"],
+[class*=" icon-dot"] {
+    font-size: 12px;
+    padding-top: 4px;
+}
 
+.movie-tag-on-card a {
+    padding-right: 5px;
+    padding-left: 0;
+}
