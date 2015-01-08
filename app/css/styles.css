@@ -409,3 +409,8 @@ a:link {
     padding-right: 5px;
     padding-left: 0;
 }
+
+.movie-sources i {
+    font-size: 10px;
+    padding-top: 6px;
+}
