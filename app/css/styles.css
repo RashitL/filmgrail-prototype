@@ -369,10 +369,14 @@ a:link {
 
 .filter-panel span {
     color: #555555;
+}
+
+.filter-panel label, .filter-panel i {
+    color: #999999;
     font-size: 100%;
 }
 
-.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+.btn-default:hover i, .btn-default:focus i, .btn-default.active i,.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
     color: #f0f0f0;
     background-color: #008cba;
     border-color: #008cba;
@@ -413,4 +417,17 @@ a:link {
 .movie-sources i {
     font-size: 10px;
     padding-top: 6px;
+}
+
+.movie-button {
+    padding: 10px 0;
+    border-right: 1px solid #f0f0f0;
+}
+
+.movie-button:hover {
+    background: #f0f0f0;
+}
+
+.movie-button:last-of-type {
+    border-right: none;
 }

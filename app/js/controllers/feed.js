@@ -8,7 +8,7 @@
       // init tags
       $scope.genres = ["Action", "Drama", "Comedy", "Romantic", "Horror", "Musical", "Sci-Fi/ Fantasy"];
       $scope.tagList = ["Sport", "Documentary", "For kids","X-mass","High-tech", "C.Nolan", "J.Depp", "C.Bale", "Similar to 'Lord of the Rings'"];
-      $scope.fulLTagList = ["2014", "Action - low", "Action - medium", "Action - high", "Drama - low", "Drama - medium", "Drama - high", "Comedy - low", "Comedy - medium", "Comedy - high", "High rating", "Liked by friends", "Shared by friends", "Sport", "Action with comedy", "Nolan"];
+      $scope.fulLTagList = ["2014", "Action - low", "Action - medium", "Action - high", "Drama - low", "Drama - medium", "Drama - high", "Comedy - low", "Comedy - medium", "Comedy - high", "High rating", "Liked by friends", "Shared by friends", "Sport", "Action with comedy", "Nolan", "Similar to 'Lord of the Rings'"];
       $scope.subTagList = [];
       $scope.tags = [];
       $scope.tagOptions = {
@@ -47,6 +47,8 @@
 
           $scope.feed = Enumerable.From($scope.feed).Shuffle().ToArray();
           $scope.subTagList = [];
+
+          $scope.tagList = Enumerable.From($scope.tagList).Shuffle().ToArray();
       };
 
       $scope.resetTags = function () {
