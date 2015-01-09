@@ -75,12 +75,6 @@ html, body {
 
 
 
-@media (max-width: 768px) {
-    .movie-card {
-        height: 480px;
-    }
-}
-
 @media (min-width: 768px) {
     .column {
         height: 100%;
@@ -425,9 +419,9 @@ a:link {
 
 @media (max-width: 768px) {
     #columns {
-        -webkit-column-count: 1;
-        -moz-column-count: 1;
-        column-count: 1;
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
     }
 
     .pin {
@@ -442,6 +436,10 @@ a:link {
 
     .container {
         padding: 0;
+    }
+
+    .movie-title {
+        max-width: 140px!important;
     }
 }
 
@@ -484,6 +482,8 @@ a:link {
     background: #27282B;
     padding: 10px;
     padding-top: 6px;
+    -ms-opacity: 0.9;
+    opacity: 0.9;
 }
 
 .footer i {
