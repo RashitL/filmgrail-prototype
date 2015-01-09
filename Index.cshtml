@@ -13,8 +13,8 @@
 </head>
 <body>
     <div class="container" style="max-width: 750px">
-        <h4 style="background: rgb(76, 76, 76); color: #aaa; margin-top: 0; padding: 15px;margin-bottom: 0;">FILMGRAIL
-            <div class="pull-right top-nav hidden-xs">
+        <h4 class="hidden-xs" style="background: rgb(76, 76, 76); color: #aaa; margin-top: 0; padding: 15px;margin-bottom: 0;">FILMGRAIL
+            <div class="pull-right top-nav">
                 <a ui-sref="feed" ui-sref-active="active">search1</a>
                  <a ui-sref="feed2" ui-sref-active="active">search2</a>
                 <a ui-sref="movies" ui-sref-active="active">movies</a>
@@ -23,6 +23,8 @@
             </div>
         </h4>
         <div ui-view></div>
+        <a class="filter-button visible-xs btn btn-default">Show filters</a>
+
         <div class="footer visible-xs">
             <div class="col-xs-3 text-center">
                 <a ui-sref="feed2" ><i class="icon-search-outline active"></i></a>

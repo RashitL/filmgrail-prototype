@@ -293,7 +293,7 @@ a:link {
 
 @media (max-width: 768px) {
     .select2-container.select2-container-multi {
-        min-width: 310px!important;
+        min-width: 3542px!important;
     }
 }
 
@@ -472,6 +472,19 @@ a:link {
         border-right: none;
     }
 
+    
+.filter-button {
+    position: fixed;
+    left: 50%;
+    bottom: 50px;
+    height: 30px;
+    width: 120px;
+    background: #27282B;
+    padding: 10px;
+    padding-top: 6px;
+    -ms-opacity: 0.9;
+    opacity: 0.9;
+}
 
 .footer {
     position: fixed;
