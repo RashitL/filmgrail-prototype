@@ -439,6 +439,10 @@ a:link {
     .poster {
         width: 100%;
     }
+
+    .container {
+        padding: 0;
+    }
 }
 
 [class^="icon-dot"],
