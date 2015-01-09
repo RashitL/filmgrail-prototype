@@ -19,6 +19,20 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: "/movies",
             templateUrl: "app/partials/movies.cshtml",
             
+        }).state("notification-news", {
+            url: "/notification-news",
+            templateUrl: "app/partials/notifications/notification-news.cshtml",
+            controller: 'feedCtrl'
+
+        }).state("notification-you", {
+            url: "/notification-you",
+            templateUrl: "app/partials/notifications/notification-you.cshtml",
+            controller: 'feedCtrl'
+
+        }).state("notification-inbox", {
+            url: "/notification-inbox",
+            templateUrl: "app/partials/notifications/notification-inbox.cshtml",
+            controller: 'feedCtrl'
         });
 
     //$urlRouterProvider

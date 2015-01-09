@@ -429,6 +429,21 @@ a:link {
     column-fill: auto;
 }
 
+#columns.column {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    font-size: 12px;
+}
+
+#columns.column div{
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    font-size: 11px;
+}
+
+
 .pin {
     display: inline-block;
 }
@@ -444,11 +459,11 @@ a:link {
 }
 
 @media (max-width: 768px) {
-    #columns {
+    /*#columns {
         -webkit-column-count: 2;
         -moz-column-count: 2;
         column-count: 2;
-    }
+    }*/
 
     .pin {
         margin-bottom: 15px!important;
@@ -466,6 +481,10 @@ a:link {
 
     .movie-title {
         max-width: 140px!important;
+    }
+
+    .nav-pills > li {
+        width: 32%;
     }
 }
 

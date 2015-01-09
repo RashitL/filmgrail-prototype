@@ -13,10 +13,10 @@
 </head>
 <body>
     <div class="container" style="max-width: 750px">
-        <h4 class="hidden-xs" style="background: rgb(76, 76, 76); color: #aaa; margin-top: 0; padding: 15px;margin-bottom: 0;">FILMGRAIL
+        <h4 class="hidden-xs" style="background: rgb(76, 76, 76); color: #aaa; margin-top: 0; padding: 15px; margin-bottom: 0;">FILMGRAIL
             <div class="pull-right top-nav">
                 <a ui-sref="feed" ui-sref-active="active">search1</a>
-                 <a ui-sref="feed2" ui-sref-active="active">search2</a>
+                <a ui-sref="feed2" ui-sref-active="active">search2</a>
                 <a ui-sref="movies" ui-sref-active="active">movies</a>
                 <a ui-sref="activity" ui-sref-active="active">activity(2)</a>
                 <a ui-sref="profile" ui-sref-active="active">profile</a>
@@ -25,16 +25,16 @@
         <div ui-view></div>
         <div class="footer visible-xs">
             <div class="col-xs-3 text-center">
-                <a ui-sref="feed2" ><i class="icon-search-outline active"></i></a>
+                <a ui-sref="feed2"><i class="icon-search-outline active"></i></a>
             </div>
             <div class="col-xs-3 text-center">
-                <i class="icon-drag-2"></i>
+                <a ui-sref="movies"><i class="icon-drag-2"></i></a>
             </div>
             <div class="col-xs-3 text-center">
-                <i class="icon-flag-outline"></i>
+                <a ui-sref="notification-news" style="color: orange;"><i class="icon-flag-outline"></i>2</a>
             </div>
             <div class="col-xs-3 text-center">
-                <i class="icon-contact-outline"></i>
+                <a ui-sref="profile"><i class="icon-contact-outline"></i></a>
             </div>
         </div>
     </div>
