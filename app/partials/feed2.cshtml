@@ -1,6 +1,6 @@
 ﻿<div class="row" style="border: 1px #f0f0f0 solid; margin: 0">
     <input ui-select2="tagOptions" placeholder="Search..." ng-model="tags" style="margin-bottom: 5px; margin-top: 5px; text-align: center;">
-    <div class="filter-mob visible-xs row" ng-include="'app/partials/filters-mob2.cshtml'"></div>
+    <div class="visible-xs" ng-include="'app/partials/filters-mob2.cshtml'"></div>
     <div class="col-md-8" style="background: #E9E9E9">
         <p class="" style="line-height: 40px; font-size: 75%; margin-bottom: 0; color: #999;">
             {{300544/((tags.length+1)*2) | number:0 }} movies found
