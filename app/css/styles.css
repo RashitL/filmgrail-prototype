@@ -475,7 +475,7 @@ a:link {
     position: fixed;
     left: 0;
     bottom: 0;
-    height: 37px;
+    height: 40px;
     width: 100%;
     background: #27282B;
     padding: 10px;
@@ -483,10 +483,9 @@ a:link {
 }
 
 .footer i {
-    font-size: 26px;
+    font-size: 29px;
 }
 
 .footer i.active {
     color: white;
-    font-size: 120%;
 }
