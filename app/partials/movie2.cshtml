@@ -4,7 +4,7 @@
             <div class="">
                 <a href="#" class="" data-element-type="35" style="color: rgb(113, 113, 113); font-weight: bold; text-decoration: none; border-radius: 6px 6px 0px 0px; display: block; padding: 0px; background: rgb(1, 0, 5);">
                     <div class="">
-                        <img ng-src="https://image.tmdb.org/t/p/w185{{movie.PosterPath}}" class="" alt="72 Fan-Made Film Posters - From Defaced Film Posters to Zombified Movie Homages (TOPLIST)" style="max-width: 100%; vertical-align: middle; border: 0px; display: block; margin: 0px auto; border-radius: 6px 6px 0px 0px; width: 236px;">
+                        <img ng-src="https://image.tmdb.org/t/p/w185{{movie.PosterPath}}" class="poster" alt="72 Fan-Made Film Posters - From Defaced Film Posters to Zombified Movie Homages (TOPLIST)">
                     </div>
                 </a>
             </div>
@@ -72,11 +72,11 @@
                     <div class="row">
                         <div tooltip="Save it" tooltip-placement="bottom" data-toggle="tooltip" class="col-xs-3 text-center pointer movie-button"><i class="icon-plus"></i>
                         </div>
-                        <div tooltip="Like it" tooltip-placement="bottom" data-toggle="tooltip" class="col-xs-3 text-center pointer movie-button"><i class="icon-heart-empty">&nbsp;{{movie.Likes.length | nullIfZero}}</i>
+                        <div tooltip="Like it" tooltip-placement="bottom" data-toggle="tooltip" class="col-xs-3 text-center pointer movie-button"><i class="icon-heart-small-outline"></i>&nbsp;{{movie.Likes.length | nullIfZero}}
                         </div>
-                        <div tooltip="Comment it" tooltip-placement="bottom" data-toggle="tooltip" class="col-xs-3 text-center pointer movie-button"><i class="icon-comment-alt">&nbsp;2</i>
+                        <div tooltip="Comment it" tooltip-placement="bottom" data-toggle="tooltip" class="col-xs-3 text-center pointer movie-button"><i class="icon-chatbubble-outline"></i>&nbsp;2
                         </div>
-                        <div tooltip="Share or send to a friend" tooltip-placement="bottom" data-toggle="tooltip" class="col-xs-3 text-center pointer movie-button"><i class="icon-share-alt">&nbsp;1</i>
+                        <div tooltip="Share or send to a friend" tooltip-placement="bottom" data-toggle="tooltip" class="col-xs-3 text-center pointer movie-button"><i class="icon-redo-outline"></i>&nbsp;1
                         </div>
                     </div>
                 </div>

@@ -6,6 +6,7 @@
     <link href="favicon.ico" rel="shortcut icon" type="image/ico">
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
     <title>Filmgrail prototype</title>
+
     @Styles.Render("~/content/vendor")
     @Styles.Render("~/content/app")
     <link href="https://fontastic.s3.amazonaws.com/HCMCBd5ToJQCErxqRK2JW/icons.css" rel="stylesheet">
@@ -13,7 +14,7 @@
 <body>
     <div class="container" style="max-width: 750px">
         <h4 style="background: rgb(76, 76, 76); color: #aaa; margin-top: 0; padding: 15px;margin-bottom: 0;">FILMGRAIL
-            <div class="pull-right top-nav">
+            <div class="pull-right top-nav hidden-xs">
                 <a ui-sref="feed" ui-sref-active="active">search1</a>
                  <a ui-sref="feed2" ui-sref-active="active">search2</a>
                 <a ui-sref="movies" ui-sref-active="active">movies</a>
@@ -22,6 +23,20 @@
             </div>
         </h4>
         <div ui-view></div>
+        <div class="footer visible-xs">
+            <div class="col-xs-3 text-center">
+                <i class="icon-search-outline active"></i>
+            </div>
+            <div class="col-xs-3 text-center">
+                <i class="icon-drag-2"></i>
+            </div>
+            <div class="col-xs-3 text-center">
+                <i class="icon-flag-outline"></i>
+            </div>
+            <div class="col-xs-3 text-center">
+                <i class="icon-contact-outline"></i>
+            </div>
+        </div>
     </div>
     @Scripts.Render("~/bundles/vendor")
     @*<script src="http://ivaynberg.github.com/select2/select2-3.2/select2.js"></script>*@

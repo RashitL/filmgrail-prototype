@@ -376,7 +376,7 @@ a:link {
     font-size: 100%;
 }
 
-.btn-default:hover i, .btn-default:focus i, .btn-default.active i,.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+.btn-default:hover i, .btn-default:focus i, .btn-default.active i, .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
     color: #f0f0f0;
     background-color: #008cba;
     border-color: #008cba;
@@ -384,8 +384,18 @@ a:link {
 
 
 
+.movie-card i {
+    font-size: 16px;
+}
 
+.movie-card .movie-button {
+    color: #aaaaaa;
+    font-weight: 100;
+}
 
+.movie-card a {
+    font-weight: 100;
+}
 
 #columns {
     -webkit-column-count: 2;
@@ -401,6 +411,34 @@ a:link {
 
 .pin {
     display: inline-block;
+}
+
+.poster {
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0px;
+    display: block;
+    margin: 0px auto;
+    border-radius: 6px 6px 0px 0px;
+    width: 236px;
+}
+
+@media (max-width: 768px) {
+    #columns {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+
+    .pin {
+        margin-bottom: 15px!important;
+        width: 100%;
+        display: inline-table;
+    }
+
+    .poster {
+        width: 100%;
+    }
 }
 
 [class^="icon-dot"],
@@ -424,10 +462,31 @@ a:link {
     border-right: 1px solid #f0f0f0;
 }
 
-.movie-button:hover {
-    background: #f0f0f0;
+    .movie-button:hover {
+        background: #f0f0f0;
+    }
+
+    .movie-button:last-of-type {
+        border-right: none;
+    }
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 35px;
+    width: 100%;
+    background: #27282B;
+    padding: 10px;
+    padding-top: 6px;
 }
 
-.movie-button:last-of-type {
-    border-right: none;
+.footer i {
+    font-size: 22px;
+}
+
+.footer i.active {
+    color: white;
+    font-size: 120%;
 }
