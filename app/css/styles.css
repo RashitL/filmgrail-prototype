@@ -73,7 +73,9 @@ html, body {
     height: auto;
 }
 
-
+i {
+    font-size: 10px;
+}
 
 @media (min-width: 768px) {
     .column {
@@ -404,7 +406,7 @@ a:link {
             padding-right: 4px;
         }
 
-.movie-card i {
+.movie-card .movie-button i {
     font-size: 16px;
 }
 

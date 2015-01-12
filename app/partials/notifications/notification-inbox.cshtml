@@ -1,34 +1,46 @@
 ﻿<div ng-include="'app/partials/notifications/notification-menu.cshtml'"></div>
-<br/>
-<div class="row" style="border: 1px #f0f0f0 solid; margin: 0;padding-right: 10px;">
+<br />
+<div class="row" style="border: 1px #f0f0f0 solid; margin: 0; padding-right: 10px;">
     <div style="background: #E9E9E9">
         <div id="columns" class="column">
             <div class="pin movie-card" ng-repeat="movie in feedInbox" style="margin-bottom: 25px; padding-right: 0">
-                 <div ng-if="$first">
+                <div ng-if="$first">
                     <div style="width: 50%" class="pull-right" ng-include="'app/partials/movie2.cshtml'"></div>
                     <div class="pull-left" style="width: 50%;">
                         <div class="" style="overflow: hidden; border-radius: 0px 0px 6px 6px; line-height: 15px; padding: 10px 12px;">
                             <a href="http://www.pinterest.com/jess2984/my-style/" style="color: rgb(113, 113, 113); text-decoration: none;">
                                 <img src="http://media-cache-ak0.pinimg.com/avatars/jess2984_1337116709_30.jpg" class="" alt="My Style" style="max-width: 100%; height: 50px; vertical-align: middle; border: 0px; border-radius: 50%; float: left; margin-right: 5px; width: 50px;">
                                 <div class="" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Simon Strumse</div>
-                                <div class="" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: rgb(183, 183, 183);">shared with you</div>
-                                <div class="" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: rgb(183, 183, 183);">today</div>
+                                <div class="" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #555;">shared with you</div>
+                                <div class="" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #555;">today</div>
                             </a>
+
+                        </div>
+
+                        <div class="" style="color: #555; padding: 10px;">
+                            <p>"It's a great movie, you must watch it :)"</p>
+                            <a class="btn btn-default btn-xs"><i class="icon-like"></i>&nbsp;I like the recommendation</a>
                         </div>
                     </div>
-                </div><div ng-if="$last">
+                </div>
+                <div ng-if="$last">
                     <div style="width: 50%" class="pull-right" ng-include="'app/partials/movie2.cshtml'"></div>
                     <div class="pull-left" style="width: 50%;">
                         <div class="" style="overflow: hidden; border-radius: 0px 0px 6px 6px; line-height: 15px; padding: 10px 12px;">
                             <a href="http://www.pinterest.com/jess2984/my-style/" style="color: rgb(113, 113, 113); text-decoration: none;">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6Eqd38sCqonKZ0IJ65kyhikaT6zxJZLE2WaDO5YhpHSeWGb7_FdgWZAk" class="" alt="My Style" style="max-width: 100%; height: 50px; vertical-align: middle; border: 0px; border-radius: 50%; float: left; margin-right: 5px; width: 50px;">
                                 <div class="" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Filmgrail</div>
-                                <div class="" style=" color: rgb(183, 183, 183);">Personal reccomendation for yesterday</div>
+                                <div class="" style="color: #555;">Personal reccomendation for yesterday</div>
                             </a>
+                        </div>
+                         <div class="" style="color: #555; padding: 10px">
+                            <p>"Fits you teaste profile (high action and medium comedy), avaiable on netflix and liked by 4 of your friends."</p>
+                             <a class="btn btn-default btn-xs"><i class="icon-like"></i>&nbsp;I like the recommendation</a>
+                             <a class="btn btn-default btn-xs top10"><i class="icon-unlike"></i>&nbsp;Not relevant</a>
                         </div>
                     </div>
                 </div>
-               
+
 
             </div>
         </div>
