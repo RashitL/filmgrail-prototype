@@ -33,6 +33,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: "/notification-inbox",
             templateUrl: "app/partials/notifications/notification-inbox.cshtml",
             controller: 'feedCtrl'
+        }).state("home", {
+            url: "/home",
+            templateUrl: "app/partials/home.cshtml",
+            controller: 'homeCtrl'
         });
 
     //$urlRouterProvider

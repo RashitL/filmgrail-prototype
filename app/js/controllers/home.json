@@ -1,0 +1,74 @@
+﻿[{
+	"ImdbId":"tt0311429",
+	"Title":"The League of Extraordinary Gentlemen",
+	"TrailerLink":"http://www.youtube.com/embed/JADCxdroMz8",
+	"PosterPath":"/AliSeCLFB6ZAkQIxosr8RAkFf6R.jpg",
+	"ProductionYear":2003,
+	"Rating":5.5999999046325684,
+	"Reason":"Shared today by Simon",
+	"ReasonSubTitle":"'The best vampire movie I've seen!'",
+	"ReasonPicture": "http://dev.filmgrail.com:8001/apiv2/User/GetSmallPhoto/2",
+	"Tags":["Action","Drama","Old"]
+},
+{
+	"ImdbId":"tt0311429",
+	"Title":"Edge of Tomorrow",
+	"TrailerLink":"http://www.youtube.com/embed/yUmSVcttXnI",
+	"PosterPath":"/zMP1PEvwH8Uy6jiIG1Qzp0svS1q.jpg",
+	"ProductionYear":2014,
+	"Rating":8.0,
+	"Reason":"Trending in cinemas",
+	"ReasonSubTitle":"2d ago",
+	"ReasonPicture": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS4R1h0sRUQYD5fAOHy_NxfR84a77Vg2YxKoYF8L_RAAYReVsRbtQj3BA",
+	"Tags":["Action","Fantasy", "Space"]
+},
+{
+	"ImdbId":"tt0311429",
+	"Title":"Interstellar",
+	"TrailerLink":"http://www.youtube.com/embed/yUmSVcttXnI",
+	"PosterPath":"/5cePxRqJ3LUBnYcXEMQhBmx2Wpj.jpg",
+	"ProductionYear":2014,
+	"Rating":8.8,
+	"Reason":"Most liked by friends",
+	"ReasonSubTitle":"among movies from 2014",
+	"ReasonPicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-BY48Gh3t-9eona7lNJ1V4sIFNPOlyJfrbDeLojmZ0CwhrJptIzV85Q",
+	"Tags":["Action","Fantasy", "Space"]
+},
+{
+	"ImdbId":"tt0311429",
+	"Title":"Domino",
+	"TrailerLink":"http://www.youtube.com/embed/yUmSVcttXnI",
+	"PosterPath":"/eUAg3pUwHmV14sPnu2ITxW5daf0.jpg",
+	"ProductionYear":2014,
+	"Rating":8.0,
+	"Reason":"Trending in cinemas",
+	"ReasonSubTitle":"2d ago",
+	"ReasonPicture": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS4R1h0sRUQYD5fAOHy_NxfR84a77Vg2YxKoYF8L_RAAYReVsRbtQj3BA",
+	"Tags":["Action","Fantasy", "Space"]
+},
+{
+	"ImdbId":"tt0311429",
+	"Title":"Catwoman",
+	"TrailerLink":"http://www.youtube.com/embed/yUmSVcttXnI",
+	"PosterPath":"/3E1XPZ2lZmL4lJV1KSUi1jaSx3w.jpg",
+	"ProductionYear":2014,
+	"Rating":8.8,
+	"Reason":"Most liked by friends",
+	"ReasonSubTitle":"among movies from 2014",
+	"ReasonPicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-BY48Gh3t-9eona7lNJ1V4sIFNPOlyJfrbDeLojmZ0CwhrJptIzV85Q",
+	"Tags":["Action","Fantasy", "Space"]
+},
+{
+	"ImdbId":"tt0311429",
+	"Title":"Madagascar",
+	"TrailerLink":"http://www.youtube.com/embed/JADCxdroMz8",
+	"PosterPath":"/yumzX3Fn7geEKEjuAGNcRjZETPE.jpg",
+	"ProductionYear":2003,
+	"Rating":6.5999999046325684,
+	"Reason":"Shared today by Simon",
+	"ReasonSubTitle":"'The best vampire movie I've seen!'",
+	"ReasonPicture": "http://dev.filmgrail.com:8001/apiv2/User/GetSmallPhoto/2",
+	"Tags":["Action","Drama","Old"]
+}
+
+]

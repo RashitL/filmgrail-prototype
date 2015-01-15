@@ -1,47 +1,46 @@
-﻿
-    <div style="margin-bottom: 10px">
-        <span style="line-height: 1.5;">Year</span>
-        <div class="btn-group btn-group-xs pull-right" role="group" aria-label="Extra-small button group">
-            <label ng-click="addTag('<1999')" class="btn btn-default" ng-model="Year1" btn-checkbox><1999</label>
-            <label ng-click="addTag('2000-2013')" class="btn btn-default" ng-model="Year2" btn-checkbox>2000-2013</label>
-            <label ng-click="addTag('2014-2015')" class="btn btn-default" ng-model="Year3" btn-checkbox>2014></label>
-        </div>
+﻿<div style="margin-bottom: 10px">
+    <span style="line-height: 1.5;">Year</span>
+    <div class="btn-group btn-group-xs pull-right" role="group" aria-label="Extra-small button group">
+        <label ng-click="addTag('<1999')" class="btn btn-default" ng-model="Year1" btn-checkbox><1999</label>
+        <label ng-click="addTag('2000-2013')" class="btn btn-default" ng-model="Year2" btn-checkbox>2000-2013</label>
+        <label ng-click="addTag('2014-2015')" class="btn btn-default" ng-model="Year3" btn-checkbox>2014></label>
     </div>
-    <div style="margin-bottom: 10px">
-        <span style="line-height: 1.7;">Provider</span>
-        <div class="btn-group btn-group-xs pull-right" role="group" aria-label="Extra-small button group">
-            <label ng-click="addTag('On Netflix, iTunes or Viaplay')" class="btn btn-default" ng-model="Provider1" btn-checkbox="'low'" tooltip="Netflix, iTunes, Viaplay" tooltip-placement="top" data-toggle="tooltip">Streaming</label>
-            <label ng-click="addTag('Airing on TV')" class="btn btn-default" ng-model="Provider2" btn-checkbox="'medium'">TV</label>
-            <label ng-click="addTag('In cinemas')" class="btn btn-default" ng-model="Provider3" btn-checkbox="'high'">Cinema</label>
-        </div>
+</div>
+<div style="margin-bottom: 10px">
+    <span style="line-height: 1.7;">Provider</span>
+    <div class="btn-group btn-group-xs pull-right" role="group" aria-label="Extra-small button group">
+        <label ng-click="addTag('On Netflix, iTunes or Viaplay')" class="btn btn-default" ng-model="Provider1" btn-checkbox="'low'" tooltip="Netflix, iTunes, Viaplay" tooltip-placement="top" data-toggle="tooltip">Streaming</label>
+        <label ng-click="addTag('Airing on TV')" class="btn btn-default" ng-model="Provider2" btn-checkbox="'medium'">TV</label>
+        <label ng-click="addTag('In cinemas')" class="btn btn-default" ng-model="Provider3" btn-checkbox="'high'">Cinema</label>
     </div>
-    <div style="margin-bottom: 10px">
-        <span style="line-height: 1.7;">IMDB rating</span>
-        <div class="btn-group btn-group-xs pull-right" role="group" aria-label="Extra-small button group">
-            <label ng-click="addTag('IMDB - 6.0>')" class="btn btn-default" ng-model="IMDBrating1" btn-checkbox="'low'">6.0></label>
-            <label ng-click="addTag('IMDB - 7.0>')" class="btn btn-default" ng-model="IMDBrating2" btn-checkbox="'medium'">7.0></label>
-            <label ng-click="addTag('IMDB - 8.0>')" class="btn btn-default" ng-model="IMDBrating3" btn-checkbox="'high'">8.0></label>
-        </div>
+</div>
+<div style="margin-bottom: 10px">
+    <span style="line-height: 1.7;">IMDB rating</span>
+    <div class="btn-group btn-group-xs pull-right" role="group" aria-label="Extra-small button group">
+        <label ng-click="addTag('IMDB - 6.0>')" class="btn btn-default" ng-model="IMDBrating1" btn-checkbox="'low'">6.0></label>
+        <label ng-click="addTag('IMDB - 7.0>')" class="btn btn-default" ng-model="IMDBrating2" btn-checkbox="'medium'">7.0></label>
+        <label ng-click="addTag('IMDB - 8.0>')" class="btn btn-default" ng-model="IMDBrating3" btn-checkbox="'high'">8.0></label>
     </div>
-    <div style="margin-bottom: 10px">
-        <span style="line-height: 1.7;">Friends</span>
-        <div class="btn-group btn-group-xs pull-right" role="group" aria-label="Extra-small button group">
-            <label ng-click="addTag('Liked by friends')" class="btn btn-default" ng-model="Friends1" btn-checkbox="'low'">liked</label>
-            <label ng-click="addTag('Commented by friends')" class="btn btn-default" ng-model="Friends2" btn-checkbox="'medium'">commented</label>
-            <label ng-click="addTag('Shared by friends')" class="btn btn-default" ng-model="Friends3" btn-checkbox="'high'">shared</label>
-        </div>
+</div>
+<div style="margin-bottom: 10px">
+    <span style="line-height: 1.7;">Friends</span>
+    <div class="btn-group btn-group-xs pull-right" role="group" aria-label="Extra-small button group">
+        <label ng-click="addTag('Liked by friends')" class="btn btn-default" ng-model="Friends1" btn-checkbox="'low'">liked</label>
+        <label ng-click="addTag('Commented by friends')" class="btn btn-default" ng-model="Friends2" btn-checkbox="'medium'">commented</label>
+        <label ng-click="addTag('Shared by friends')" class="btn btn-default" ng-model="Friends3" btn-checkbox="'high'">shared</label>
     </div>
-    <hr>
-    <div ng-repeat="genre in genres" style="margin-bottom: 10px">
-        <span style="line-height: 1.7;">{{genre}}</span>
-        <div class="btn-group btn-group-xs pull-right" role="group" aria-label="Extra-small button group">
-            <label tooltip="{{genre}}- low" tooltip-placement="bottom" data-toggle="tooltip" ng-click="addTag(genre+' - low')" class="btn btn-default" ng-model="radioModel" btn-radio="'low'" uncheckable style="padding-top: 4px; width: 30px; height: 20px;"><i class="icon-dot"></i></label>
-            <label tooltip="{{genre}}- medium" tooltip-placement="bottom" data-toggle="tooltip" ng-click="addTag(genre+' - medium')" class="btn btn-default" ng-model="radioModel" btn-radio="'medium'" uncheckable style="padding-top: 4px; width: 30px; height: 20px;"><i class="icon-dot-2"></i></label>
-            <label tooltip="{{genre}}- high" tooltip-placement="bottom" data-toggle="tooltip" ng-click="addTag(genre+' - high')" class="btn btn-default" ng-model="radioModel" uncheckable btn-radio="'high'" uncheckable style="padding-top: 4px; width: 30px; height: 20px;"><i class="icon-dot-3"></i></label>
-        </div>
+</div>
+<hr>
+<div ng-repeat="genre in genres" style="margin-bottom: 10px">
+    <span style="line-height: 1.7;">{{genre}}</span>
+    <div class="btn-group btn-group-xs pull-right" role="group" aria-label="Extra-small button group">
+        <label tooltip="{{genre}}- low" tooltip-placement="bottom" data-toggle="tooltip" ng-click="addTag(genre+' - low')" class="btn btn-default" ng-model="radioModel" btn-radio="'low'" uncheckable style="padding-top: 4px; width: 30px; height: 20px;"><i class="icon-dot"></i></label>
+        <label tooltip="{{genre}}- medium" tooltip-placement="bottom" data-toggle="tooltip" ng-click="addTag(genre+' - medium')" class="btn btn-default" ng-model="radioModel" btn-radio="'medium'" uncheckable style="padding-top: 4px; width: 30px; height: 20px;"><i class="icon-dot-2"></i></label>
+        <label tooltip="{{genre}}- high" tooltip-placement="bottom" data-toggle="tooltip" ng-click="addTag(genre+' - high')" class="btn btn-default" ng-model="radioModel" uncheckable btn-radio="'high'" uncheckable style="padding-top: 4px; width: 30px; height: 20px;"><i class="icon-dot-3"></i></label>
     </div>
+</div>
 
-    <hr>
-    <div class="filter-block">
-        <a ng-click="addTag(tag)" class="btn btn-link btn-xs" ng-class="{'tag-opacity':subTagList.length>0}" style="margin: 0" ng-repeat="tag in tagList">#{{tag}}</a>
-    </div>
+<hr>
+<div class="filter-block">
+    <a ng-click="addTag(tag)" class="btn btn-link btn-xs" ng-class="{'tag-opacity':subTagList.length>0}" style="margin: 0" ng-repeat="tag in tagList">#{{tag}}</a>
+</div>
