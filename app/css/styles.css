@@ -372,10 +372,14 @@ a:link {
     font-size: 100%;
 }
 
-.btn-default:hover i, .btn-default:focus i, .btn-default.active i, .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+.btn-default:focus i, .btn-default.active i, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
     color: #f0f0f0;
     background-color: #008cba;
     border-color: #008cba;
+}
+
+.btn-default:hover i, .btn-default:hover {
+    background-color: rgb(231, 231, 231);
 }
 
 .filter-mob .filter-block label, .filter-mob .filter-block span {
@@ -486,7 +490,7 @@ a:link {
     }
 
     .nav-pills > li {
-        width: 32%;
+        width: 33.3%;
     }
 
     .movies {
@@ -556,3 +560,36 @@ a:link {
     margin-right: 5px;
     width: 30px;
 }
+
+.nav > li {
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+    margin-left: 0!important;
+}
+
+.nav > li:first-child {
+    -ms-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -ms-border-top-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border: 1px solid #999999;
+}
+
+.nav > li:last-child {
+    -ms-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -ms-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid #999999;
+}
+
+.nav > li > a {
+    color: #999999;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+    .nav > li .active {
+        background: #555555;
+        color: white;
+    }
