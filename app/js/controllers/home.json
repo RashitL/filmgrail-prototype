@@ -55,7 +55,7 @@
 	"Rating":8.8,
 	"Reason":"with Sandra Bullock",
 	"ReasonSubTitle":"you liked movies with her",
-	"ReasonPicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-BY48Gh3t-9eona7lNJ1V4sIFNPOlyJfrbDeLojmZ0CwhrJptIzV85Q",
+	"ReasonPicture": "http://ia.media-imdb.com/images/M/MV5BMTM5ODUwMjczNV5BMl5BanBnXkFtZTgwMDg5NjYxMTE@._V1_SX100_CR0,0,100,100_AL_.jpg",
 	"Tags":["Action","Fantasy", "Space"]
 },
 {
@@ -65,9 +65,9 @@
 	"PosterPath":"/yumzX3Fn7geEKEjuAGNcRjZETPE.jpg",
 	"ProductionYear":2003,
 	"Rating":6.5999999046325684,
-	"Reason":"Shared today by Simon",
-	"ReasonSubTitle":"'The best vampire movie I've seen!'",
-	"ReasonPicture": "http://dev.filmgrail.com:8001/apiv2/User/GetSmallPhoto/2",
+	"Reason":"Inge told last week",
+	"ReasonSubTitle":"'Really funny movie to watch with your family!'",
+	"ReasonPicture": "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpa1/v/t1.0-1/p50x50/10620556_10152233040096526_4163766412502154274_n.jpg?oh=5607de74ffb5b47cd0ccf9cc7c5be7c3&oe=556AB51A&__gda__=1428593063_b48f29925623fc06ff320ee21018702f",
 	"Tags":["Action","Drama","Old"]
 }
 
