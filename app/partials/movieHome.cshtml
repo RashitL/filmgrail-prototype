@@ -24,12 +24,12 @@
         <div class="movie-tag-on-card" style="padding: 5px 12px 6px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(224, 224, 224);">
             <a ng-click="addTag(movieTag)" class="btn btn-link btn-xs" style="margin: 0" ng-repeat="movieTag in movie.Tags">#{{movieTag}}</a>
         </div>
-        <div class="" style="padding: 5px 12px 6px;border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(224, 224, 224);">
-            <img class="img-rounded pull-left" ng-src="{{movie.ReasonPicture}}" ng-show="movie.ReasonPicture!=null" style="margin-bottom: 10px;"/>
-            <p class="" style="font-size: 10px; color: rgb(120, 120, 120); line-height: 17px; word-wrap: break-word; margin: 5px 0px; padding: 0px;font-weight: bold">
+        <div class="" style="padding: 7px 12px 10px;border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(224, 224, 224);">
+            <img class="img-rounded pull-left" ng-src="{{movie.ReasonPicture}}" ng-show="movie.ReasonPicture!=null" style="margin-bottom: 5px;"/>
+            <p class="" style="font-size: 10px; color: rgb(120, 120, 120); line-height: 17px; word-wrap: break-word; margin: 0px; padding: 0px;font-weight: bold">
                 {{movie.Reason}}
             </p>
-            <p class="" style="font-size: 10px; color: rgb(120, 120, 120); line-height: 10px; word-wrap: break-word; margin: 5px 0px; padding: 0px;font-style: italic">
+            <p class="" style="font-size: 10px; color: rgb(120, 120, 120); line-height: 11px; word-wrap: break-word; margin: 0px; padding: 0px;font-style: italic">
                 {{movie.ReasonSubTitle}}
             </p>
         </div>

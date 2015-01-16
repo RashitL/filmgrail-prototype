@@ -10,7 +10,7 @@ html, body
 
 html, body {
     height: 100%;
-    background-color: #FFFFFF!important;
+    background-color: #E9E9E9!important;
 }
 
 .ui-match {
@@ -288,7 +288,7 @@ a:link {
 }
 
 .select2-container.select2-container-multi {
-    margin-left: 5px;
+    margin-left: 0;
     width: auto!important;
     min-width: 707px!important;
 }
@@ -478,7 +478,7 @@ a:link {
     }
 
     .container {
-        padding: 0;
+        padding: 5px;
     }
 
     .movie-title {
@@ -490,7 +490,7 @@ a:link {
     }
 
     .movies {
-        padding: 5px;
+        padding: 0;
     }
 }
 
@@ -531,7 +531,6 @@ a:link {
     height: 40px;
     width: 100%;
     background: #ffffff;
-    padding: 10px;
     padding-top: 6px;
     -ms-opacity: 0.9;
     opacity: 0.9;
