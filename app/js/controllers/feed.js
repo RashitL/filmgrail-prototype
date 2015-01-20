@@ -68,7 +68,7 @@
           $scope.tagList = Enumerable.From($scope.tagList).Shuffle().ToArray();
       };
 
-      $scope.resetTags = function () {
+      $scope.reset = function () {
           $rootScope.tags = [];
           $scope.feed = Enumerable.From($scope.feed).Shuffle().ToArray();
           $scope.subTagList = [];

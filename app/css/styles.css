@@ -380,8 +380,8 @@ a:link {
 
 .btn-default:focus i, .btn-default.active i, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
     color: #f0f0f0;
-    background-color: #008cba;
-    border-color: #008cba;
+    background-color: green;
+    border-color: green;
 }
 
 .btn-default:hover i, .btn-default:hover {
@@ -441,12 +441,6 @@ a:link {
     column-fill: auto;
 }
 
-.home #columns {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
-}
-
     #columns.column {
         -webkit-column-count: 1;
         -moz-column-count: 1;
@@ -476,12 +470,15 @@ a:link {
     width: 236px;
 }
 
+@media (min-width: 768px) {
+    .home #columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+
 @media (max-width: 768px) {
-    /*#columns {
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
-        column-count: 2;
-    }*/
 
     .pin {
         margin-bottom: 15px!important;
@@ -648,8 +645,12 @@ select {
     overflow-x: hidden;
 }
 
-.filter-block-light td {
+    .filter-block-light td {
         color: white;
         font-weight: bold;
         font-size: 13px;
     }
+
+.btn-link {
+    color: green!important;
+}

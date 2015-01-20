@@ -1,16 +1,12 @@
-﻿<div ng-show="tags.length>0" class="row" style="margin: 0">
+﻿<div ng-show="tags.length>0" style="height: 40px; background: green; margin: -5px; margin-bottom: 0; padding: 10px 5px;color: white">
+    <div ng-click="reset()" class="col-xs-2 text-left" style="padding: 0;"><i class="icon-chevron-left" style="color: white;font-size: 18px;"></i></div>
+    <div class="col-xs-8 text-center">{{300544/((tags.length+1)*2) | number:0 }} movies</div>
+    <div class="col-xs-2 text-right" style="padding: 0;"><i style="color: white;font-size: 18px;" class="icon-adjust-alt"></i></div>
+</div>
+<div ng-show="tags.length>0" class="row" style="margin: 0">
     <input ui-select2="tagOptions" placeholder="Search..." ng-model="tags" style="margin-bottom: 5px; margin-top: 5px; text-align: center;">
     <div class="visible-xs" ng-include="'app/partials/filters-mob-light.cshtml'"></div>
     <div class="col-md-8 movies" style="background: #E9E9E9">
-        <p class="" style="line-height: 40px; font-size: 75%; margin-bottom: 0; color: #999;height: 40px;">
-            {{300544/((tags.length+1)*2) | number:0 }} movies found
-            @*<a class="pull-right" style="font-size: 100%;color: #999;">newest</a>
-            <a class="pull-right" style="font-size: 100%">popular&nbsp;&nbsp;</a>*@
-            @*<select class="pull-right dropdown">
-                <option>newest</option>
-                <option>popular</option>
-            </select>*@
-        </p>
         <div id="columns">
             <div class="pin movie-card" ng-repeat="movie in feed" style="margin-bottom: 25px; padding-right: 0">
                 <div ng-include="'app/partials/movie2.cshtml'"></div>
