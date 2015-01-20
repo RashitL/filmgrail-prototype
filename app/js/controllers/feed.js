@@ -11,7 +11,7 @@
           { title: "Drama", picture: "https://s-media-cache-ak0.pinimg.com/111x55_sf-76/f8/7e/8d/f87e8dc1d271a1dda2420141665c32d7.jpg" },
           { title: "Comedy", picture: "http://media-cache-ak0.pinimg.com/236x/30/34/58/3034589de1269502cdf85c06925eb45e.jpg" },
           { title: "Sport", picture: "https://s-media-cache-ak0.pinimg.com/111x55_sf-76/75/63/f3/7563f3c1a6a6e2ec633aef9a993a5420.jpg" },
-          { title: "For kids", picture: "https://s-media-cache-ak0.pinimg.com/111x55_sf-76/0d/57/17/0d57170c4c333d2e08f448928a980315.jpg.jpg" },
+          { title: "For kids", picture: "https://s-media-cache-ak0.pinimg.com/111x55_sf-76/0d/57/17/0d57170c4c333d2e08f448928a980315.jpg" },
           { title: "Similar to 'Lord of the Rings", picture: "https://s-media-cache-ak0.pinimg.com/111x55_sf-76/6d/03/c0/6d03c0146c4928d13a774c906b4ba0eb.jpg" },
           { title: "X-mass", picture: "https://s-media-cache-ak0.pinimg.com/111x55_sf-76/16/8c/d4/168cd4f2a1a930baf860af911fbf9313.jpg" },
           { title: "C.Nolan", picture: "https://s-media-cache-ak0.pinimg.com/111x55_sf-76/7a/3e/c9/7a3ec9a763ce142f86f2a6a8b886fe6c.jpg" },
@@ -44,18 +44,20 @@
               return;
           }
 
-          if (tag == "Action") {
-              $scope.subTagList = ["Action - low", "Action - medium", "Action - high"];
-              return;
-          }
-          if (tag == "Drama") {
-              $scope.subTagList = ["Drama - low", "Drama - medium", "Drama - high"];
-              return;
-          }
-          if (tag == "Comedy") {
-              $scope.subTagList = ["Comedy - low", "Comedy - medium", "Comedy - high"];
-              return;
-          }
+          //if (tag == "Action") {
+          //    $scope.subTagList = ["Action - low", "Action - medium", "Action - high"];
+          //    return;
+          //}
+          //if (tag == "Drama") {
+          //    $scope.subTagList = ["Drama - low", "Drama - medium", "Drama - high"];
+          //    return;
+          //}
+          //if (tag == "Comedy") {
+          //    $scope.subTagList = ["Comedy - low", "Comedy - medium", "Comedy - high"];
+          //    return;
+          //}
+
+          $scope.searchTags = Enumerable.From($scope.searchTags).Where('t=>t.title!="' + tag + '"').ToArray();
 
           var tags = [{ id: tag, text: tag }].concat($scope.tags.reverse()).reverse();
           $rootScope.tags = tags;
