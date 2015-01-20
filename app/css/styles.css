@@ -633,6 +633,7 @@ select {
     overflow-y: hidden;
     white-space: nowrap;
     margin: 0 -5px;
+    padding-top: 3px;
 }
 
 .filter-block-light {
