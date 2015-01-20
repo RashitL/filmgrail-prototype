@@ -17,6 +17,17 @@ appDirectives.directive('inoFocus', function () {
     };
 });
 
+appDirectives.directive('backImg', function () {
+    return function (scope, element, attrs) {
+        attrs.$observe('backImg', function (value) {
+            element.css({
+                'background-image': 'url(' + value + ')',
+                'background-size': 'cover'
+            });
+        });
+    };
+});
+
 appDirectives.directive('errSrc', function () {
     return {
         link: function (scope, element, attrs) {

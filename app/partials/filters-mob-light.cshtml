@@ -1,0 +1,12 @@
+﻿<div class="filter-mob-light">
+    <div style="width: 1600px">
+        <div ng-click="addTag(tag.title)" class="filter-block-light" ng-class="{'tag-opacity':subTagList.length>0}" back-img="{{tag.picture}}" ng-repeat="tag in searchTags">
+            <table style="width: 100%; height: 100%">
+                <tr style="vertical-align: center">
+                    <td style="text-align: center; font-weight: bold;">{{tag.title}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

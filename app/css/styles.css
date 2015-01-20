@@ -605,6 +605,7 @@ a:link {
     font-size: 10px;
     color: #999999;
     margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .search-items a {
@@ -615,3 +616,34 @@ a:link {
     padding-left: 10px;
     line-height: 33px;
 }
+
+select {
+    margin-top: 10px;
+    background: transparent;
+    border: none;
+}
+
+.filter-mob-light {
+    background: black;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin: 0 -5px;
+}
+
+.filter-block-light {
+    width: 100px;
+    height: 60px;
+    background: gray;
+    margin: 5px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    overflow-x: hidden;
+}
+
+.filter-block-light td {
+        color: white;
+        font-weight: bold;
+        font-size: 13px;
+    }
