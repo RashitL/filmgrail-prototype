@@ -13,6 +13,10 @@ html, body {
     background-color: #E9E9E9!important;
 }
 
+    body.white, htmlwhite {
+        background-color: white!important;
+    }
+
 .ui-match {
     background: yellow;
 }
@@ -281,6 +285,8 @@ a:link {
 
 .select2-choices {
     border: 1px solid #eeeeee !important;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
 }
 
 .select2-container-multi .select2-choices .select2-search-choice {
@@ -399,7 +405,7 @@ a:link {
 
     .filter-mob .filter-block {
         padding: 10px;
-        background: #f0f0f0;
+        /*background: #f0f0f0;*/
         text-align: center;
         float: left;
         display: inline-block;
@@ -567,29 +573,45 @@ a:link {
     margin-left: 0!important;
 }
 
-.nav > li:first-child {
-    -ms-border-bottom-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    -ms-border-top-left-radius: 5px;
-    border-top-left-radius: 5px;
-    border: 1px solid #999999;
-}
+    .nav > li:first-child {
+        -ms-border-bottom-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        -ms-border-top-left-radius: 5px;
+        border-top-left-radius: 5px;
+        border: 1px solid #999999;
+    }
 
-.nav > li:last-child {
-    -ms-border-bottom-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    -ms-border-top-right-radius: 5px;
-    border-top-right-radius: 5px;
-    border: 1px solid #999999;
-}
+    .nav > li:last-child {
+        -ms-border-bottom-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        -ms-border-top-right-radius: 5px;
+        border-top-right-radius: 5px;
+        border: 1px solid #999999;
+    }
 
-.nav > li > a {
-    color: #999999;
-    font-weight: bold;
-    font-size: 12px;
-}
+    .nav > li > a {
+        color: #999999;
+        font-weight: bold;
+        font-size: 12px;
+    }
 
     .nav > li .active {
         background: #555555;
         color: white;
     }
+
+
+.search-items p {
+    font-size: 10px;
+    color: #999999;
+    margin-top: 10px;
+}
+
+.search-items a {
+    font-size: 16px;
+    color: #333333;
+    display: block;
+    font-weight: bold;
+    padding-left: 10px;
+    line-height: 30px;
+}

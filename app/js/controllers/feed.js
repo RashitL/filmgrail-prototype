@@ -11,7 +11,6 @@
       $scope.tagList = ["Sport", "Documentary", "For kids", "X-mass", "High-tech", "C.Nolan", "J.Depp", "C.Bale", "Similar to 'Lord of the Rings'"];
       $scope.fulLTagList = ["2014", "Action - low", "Action - medium", "Action - high", "Drama - low", "Drama - medium", "Drama - high", "Comedy - low", "Comedy - medium", "Comedy - high", "High rating", "Liked by friends", "Shared by friends", "Sport", "Action with comedy", "Nolan", "Similar to 'Lord of the Rings'"];
       $scope.subTagList = [];
-      $scope.tags = [];
       $scope.tagOptions = {
           tags: function (query) {
               return $scope.fulLTagList;
@@ -19,7 +18,7 @@
           tokenSeparators: [","],
           multiple: true,
           initSelection: function (element, callback) {
-              callback($scope.tags);
+              callback($rootScope.tags);
           }
       };
 
@@ -44,7 +43,7 @@
           }
 
           var tags = [{ id: tag, text: tag }].concat($scope.tags.reverse()).reverse();
-          $scope.tags = tags;
+          $rootScope.tags = tags;
 
           $scope.feed = Enumerable.From($scope.feed).Shuffle().ToArray();
           $scope.subTagList = [];
@@ -53,7 +52,7 @@
       };
 
       $scope.resetTags = function () {
-          $scope.tags = [];
+          $rootScope.tags = [];
           $scope.feed = Enumerable.From($scope.feed).Shuffle().ToArray();
           $scope.subTagList = [];
       };

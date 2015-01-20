@@ -1,4 +1,4 @@
-﻿<div class="row" style="border: 1px #f0f0f0 solid; margin: 0">
+﻿<div ng-show="tags.length>0" class="row" style="margin: 0">
     <input ui-select2="tagOptions" placeholder="Search..." ng-model="tags" style="margin-bottom: 5px; margin-top: 5px; text-align: center;">
     <div class="visible-xs" ng-include="'app/partials/filters-mob2.cshtml'"></div>
     <div class="col-md-8 movies" style="background: #E9E9E9">
@@ -13,4 +13,16 @@
         </div>
     </div>
     <div class="col-md-4 filter-panel hidden-xs" style="padding-top: 20px; background: #fafafa; height: 600px; font-size: 75%;" ng-include="'app/partials/filters2.cshtml'"></div>
+</div>
+<div ng-hide="tags.length>0" class="search-items">
+    <input ui-select2="tagOptions" placeholder="Search..." ng-model="tags" style="margin-bottom: 5px; margin-top: 5px; text-align: center;">
+
+    <p>Sources</p>
+    <a ng-click="addTag('On Netflix, iTunes or Viaplay')">Avaiable on streaming</a>
+    <a ng-click="addTag('Airing on TV')">Airing on TV</a>
+    <a ng-click="addTag('In cinemas')">In cinemas</a>
+    <p>Genres</p>
+    <a ng-click="addTag(genre+' - medium')" ng-repeat="genre in genres">{{genre}}</a>
+    <p>More categories</p>
+    <a ng-click="addTag(tag)" ng-repeat="tag in tagList">#{{tag}}</a>
 </div>

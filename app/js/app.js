@@ -44,7 +44,7 @@ var app = angular.module('app', [
           $rootScope.user = user;
           $rootScope.eSource = eSource;
           $rootScope.oldUrl = appConfig.oldUrl;
-          $rootScope.folderStat = null;
+          $rootScope.tags = [];
       }]);
 
 angular.module('fastClick', []).
