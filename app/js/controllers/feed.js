@@ -73,6 +73,4 @@
           $scope.feed = Enumerable.From($scope.feed).Shuffle().ToArray();
           $scope.subTagList = [];
       };
-
-
   }]);

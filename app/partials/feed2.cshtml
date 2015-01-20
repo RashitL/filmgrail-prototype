@@ -1,9 +1,9 @@
-﻿<div ng-show="tags.length>0" style="height: 40px; background: green; margin: -5px; margin-bottom: 0; padding: 10px 5px;color: white">
-    <div ng-click="reset()" class="col-xs-2 text-left" style="padding: 0;"><i class="icon-chevron-left" style="color: white;font-size: 18px;"></i></div>
+﻿<div ng-show="tags.length>0 &&!showFilters" style="height: 40px; background: green; margin: -5px; margin-bottom: 0; padding: 10px 5px; color: white">
+    <div ng-click="reset()" class="col-xs-2 text-left" style="padding: 0;"><i class="icon-chevron-left" style="color: white; font-size: 18px;"></i></div>
     <div class="col-xs-8 text-center">{{300544/((tags.length+1)*2) | number:0 }} movies</div>
-    <div class="col-xs-2 text-right" style="padding: 0;"><i style="color: white;font-size: 18px;" class="icon-adjust-alt"></i></div>
+    <div ng-click="showFilters=!showFilters" class="col-xs-2 text-right" style="padding: 0;"><i style="color: white; font-size: 18px;" class="icon-adjust-alt"></i></div>
 </div>
-<div ng-show="tags.length>0" class="row" style="margin: 0">
+<div ng-show="tags.length>0&&!showFilters" class="row" style="margin: 0">
     <input ui-select2="tagOptions" placeholder="Search..." ng-model="tags" style="margin-bottom: 5px; margin-top: 5px; text-align: center;">
     <div class="visible-xs" ng-include="'app/partials/filters-mob-light.cshtml'"></div>
     <div class="col-md-8 movies" style="background: #E9E9E9">
@@ -15,7 +15,7 @@
     </div>
     <div class="col-md-4 filter-panel hidden-xs" style="padding-top: 20px; background: #fafafa; height: 600px; font-size: 75%;" ng-include="'app/partials/filters2.cshtml'"></div>
 </div>
-<div ng-hide="tags.length>0" class="search-items">
+<div ng-hide="tags.length>0||showFilters" class="search-items">
     <input ui-select2="tagOptions" placeholder="Search..." ng-model="tags" style="margin-bottom: 5px; margin-top: 5px; text-align: center;">
 
     <p>Sources</p>
@@ -27,3 +27,9 @@
     <p>More categories</p>
     <a ng-click="addTag(tag)" ng-repeat="tag in tagList">#{{tag}}</a>
 </div>
+<div ng-show="showFilters" style="height: 40px; background: green; margin: -5px; margin-bottom: 0; padding: 10px 5px; color: white">
+    <div ng-click="showFilters=false" class="col-xs-2 text-left" style="padding: 0;"><i class="icon-chevron-left" style="color: white; font-size: 18px;"></i></div>
+    <div class="col-xs-8 text-center">{{300544/((tags.length+1)*2) | number:0 }} movies</div>
+    <div ng-click="showFilters=!showFilters" class="col-xs-2 text-right" style="padding: 0;"></div>
+</div>
+<div class="col-md-4 filter-panel" ng-show="showFilters" style="padding-top: 20px; background: #fafafa; height: 600px; font-size: 75%;" ng-include="'app/partials/filters2.cshtml'"></div>
