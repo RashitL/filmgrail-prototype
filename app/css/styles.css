@@ -441,6 +441,12 @@ a:link {
     column-fill: auto;
 }
 
+.home #columns {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+}
+
     #columns.column {
         -webkit-column-count: 1;
         -moz-column-count: 1;
