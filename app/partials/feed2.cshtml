@@ -6,10 +6,10 @@
             {{300544/((tags.length+1)*2) | number:0 }} movies found
             @*<a class="pull-right" style="font-size: 100%;color: #999;">newest</a>
             <a class="pull-right" style="font-size: 100%">popular&nbsp;&nbsp;</a>*@
-            <select class="pull-right dropdown">
+            @*<select class="pull-right dropdown">
                 <option>newest</option>
                 <option>popular</option>
-            </select>
+            </select>*@
         </p>
         <div id="columns">
             <div class="pin movie-card" ng-repeat="movie in feed" style="margin-bottom: 25px; padding-right: 0">
