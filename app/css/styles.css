@@ -608,10 +608,10 @@ a:link {
 }
 
 .search-items a {
-    font-size: 16px;
+    font-size: 17px;
     color: #333333;
     display: block;
     font-weight: bold;
     padding-left: 10px;
-    line-height: 30px;
+    line-height: 33px;
 }
