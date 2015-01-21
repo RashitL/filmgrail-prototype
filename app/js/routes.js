@@ -37,6 +37,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: "/home",
             templateUrl: "app/partials/home.cshtml",
             controller: 'homeCtrl'
+        }).state("profile", {
+            url: "/profile",
+            templateUrl: "app/partials/profile.cshtml",
+            controller: 'homeCtrl'
         });
 
     //$urlRouterProvider
