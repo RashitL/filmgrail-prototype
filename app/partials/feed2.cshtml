@@ -32,4 +32,4 @@
     <div class="col-xs-8 text-center">{{300544/((tags.length+1)*2) | number:0 }} movies</div>
     <div ng-click="showFilters=!showFilters" class="col-xs-2 text-right" style="padding: 0;"></div>
 </div>
-<div class="col-md-4 filter-panel" ng-show="showFilters" style="padding-top: 20px; background: #fafafa; height: 600px; font-size: 75%;" ng-include="'app/partials/filters2.cshtml'"></div>
+<div class="col-md-4 filter-panel" ng-if="showFilters&&tags.length>0" style="padding-top: 20px; background: #fafafa; height: 600px; font-size: 75%;" ng-include="'app/partials/filters2.cshtml'"></div>
