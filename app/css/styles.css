@@ -466,7 +466,7 @@ a:link {
     border: 0px;
     display: block;
     margin: 0px auto;
-    border-radius: 6px 6px 0px 0px;
+    border-radius: 0;
     width: 236px;
 }
 
@@ -641,8 +641,8 @@ select {
     height: 60px;
     background: gray;
     margin: 5px;
-    -ms-border-radius: 3px;
-    border-radius: 3px;
+    -ms-border-radius: 0;
+    border-radius: 0;
     display: inline-block;
     overflow-x: hidden;
 }
