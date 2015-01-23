@@ -380,8 +380,8 @@ a:link {
 
 .btn-default:focus i, .btn-default.active i, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
     color: #f0f0f0;
-    background-color: green;
-    border-color: green;
+    background-color: #0dac9b;
+    border-color: #0dac9b;
 }
 
 .btn-default:hover i, .btn-default:hover {
@@ -654,5 +654,5 @@ select {
     }
 
 .btn-link {
-    color: green!important;
+    color: #0dac9b!important;
 }

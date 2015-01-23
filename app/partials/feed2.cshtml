@@ -1,4 +1,4 @@
-﻿<div ng-show="tags.length>0 &&!showFilters" style="height: 40px; background: green; margin: -5px; margin-bottom: 0; padding: 10px 5px; color: white">
+﻿<div ng-show="tags.length>0 &&!showFilters" style="height: 40px; background: #0dac9b; margin: -5px; margin-bottom: 0; padding: 10px 5px; color: white">
     <div ng-click="reset()" class="col-xs-2 text-left" style="padding: 0;"><i class="icon-chevron-left" style="color: white; font-size: 18px;"></i></div>
     <div class="col-xs-8 text-center">{{300544/((tags.length+1)*2) | number:0 }} movies</div>
     <div ng-click="showFilters=!showFilters" class="col-xs-2 text-right" style="padding: 0;"><i style="color: white; font-size: 18px;" class="icon-adjust-alt"></i></div>
@@ -26,7 +26,7 @@
     <p>More categories</p>
     <a ng-click="addTag(tag)" ng-repeat="tag in tagList">#{{tag}}</a>
 </div>
-<div ng-show="showFilters" style="height: 40px; background: green; margin: -5px; margin-bottom: 0; padding: 10px 5px; color: white">
+<div ng-show="showFilters" style="height: 40px; background: #0dac9b; margin: -5px; margin-bottom: 0; padding: 10px 5px; color: white">
     <div ng-click="showFilters=false" class="col-xs-2 text-left" style="padding: 0;"><i class="icon-chevron-left" style="color: white; font-size: 18px;"></i></div>
     <div class="col-xs-8 text-center">{{300544/((tags.length+1)*2) | number:0 }} movies</div>
     <div ng-click="showFilters=!showFilters" class="col-xs-2 text-right" style="padding: 0;"></div>
