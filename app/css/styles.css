@@ -490,6 +490,12 @@ a:link {
         width: 100%;
     }
 
+    .collection .poster {
+        width: 48.9%;
+        margin: 0;
+        display: inline-block;
+    }
+
     .container {
         padding: 5px;
     }
@@ -655,4 +661,8 @@ select {
 
 .btn-link {
     color: #0dac9b!important;
+}
+
+.collection .movie-button {
+    padding: 4px 0;
 }
