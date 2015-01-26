@@ -666,3 +666,7 @@ select {
 .collection .movie-button {
     padding: 4px 0;
 }
+
+.collection .btn-xs {
+    padding:0;
+}

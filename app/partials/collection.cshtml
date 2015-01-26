@@ -18,19 +18,30 @@
                 <div class="movie-sources">
                     <span class="" style="font-size: 10px; color: rgb(120, 120, 120);">{{movie.Movies}} movies, {{movie.Followers}} followers</span>
                     <i tooltip="Avaialbe on Netflix and ITunes" tooltip-placement="top" data-toggle="tooltip" ng-show="movie.Likes.length>0" class="icon-signal pull-right" style="color: #0dac9b"></i>
-                    <i tooltip="Airing on NRK2 tomorrow 21:00" tooltip-placement="top" data-toggle="tooltip" ng-show="movie.Likes.length>1" class="icon-television-tv pull-right" style="color:#0dac9b"></i>
+                    <i tooltip="Airing on NRK2 tomorrow 21:00" tooltip-placement="top" data-toggle="tooltip" ng-show="movie.Likes.length>1" class="icon-television-tv pull-right" style="color: #0dac9b"></i>
                     <i tooltip="Avaialbe in cinemas" tooltip-placement="top" data-toggle="tooltip" ng-show="movie.Likes.length>2" class="icon-cinema pull-right" style="color: #0dac9b"></i>
                 </div>
 
             </a>
         </div>
+        <div ng-show="movie.Movies>30" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(224, 224, 224);">
+            <div class="" style="color: rgb(113, 113, 113); text-decoration: none; overflow: hidden; display: block; padding: 5px 12px 6px;">
+                <div class="movie-sources">
+                    <span class="" style="font-size: 10px; color: rgb(120, 120, 120);">
+                        <a href="#" class="btn btn-link btn-xs">Simon</a>, <a href="#" class="btn btn-link btn-xs">Inge</a> and <a href="#" class="btn btn-link btn-xs">2 friends</a></span>
+                </div>
+
+            </div>
+        </div>
         <div class="" style="font-family: Helvetica, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', sans-serif; font-weight: bold; color: rgb(119, 119, 119);">
             <div class="" data-element-type="282" style="border-radius: 0;">
                 <div class="" style="border-radius: 0; line-height: 15px; padding: 0 12px;">
                     <div class="row">
-                        <div tooltip="Follow" tooltip-placement="bottom" data-toggle="tooltip" class="col-xs-9 text-center pointer movie-button"><a href="#" class="btn btn-link btn-xs">Follow</a>
+                        <div tooltip="Follow" tooltip-placement="bottom" data-toggle="tooltip" class="col-xs-9 text-center pointer movie-button">
+                            <a href="#" class="btn btn-link btn-xs">Follow</a>
                         </div>
-                        <div tooltip="Share or send to a friend" tooltip-placement="bottom" data-toggle="tooltip" class="col-xs-3 text-center pointer movie-button"><a href="#" class="btn btn-link btn-xs"><i class="icon-dot-3"></i></a>
+                        <div tooltip="Share or send to a friend" tooltip-placement="bottom" data-toggle="tooltip" class="col-xs-3 text-center pointer movie-button">
+                            <a href="#" class="btn btn-link btn-xs"><i class="icon-dot-3"></i></a>
                         </div>
                     </div>
                 </div>
