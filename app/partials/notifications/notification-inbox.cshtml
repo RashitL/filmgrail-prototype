@@ -1,49 +1,80 @@
 ﻿<div ng-include="'app/partials/notifications/notification-menu.cshtml'"></div>
-<br />
-<div class="row" style="border: 1px #f0f0f0 solid; margin: 0; padding-right: 10px;">
-    <div style="background: #E9E9E9">
-        <div id="columns" class="column">
-            <div class="pin movie-card" ng-repeat="movie in feedInbox" style="margin-bottom: 25px; padding-right: 0">
-                <div ng-if="$first">
-                    <div style="width: 50%" class="pull-right" ng-include="'app/partials/movie2.cshtml'"></div>
-                    <div class="pull-left" style="width: 50%;">
-                        <div class="" style="overflow: hidden; border-radius: 0px 0px 6px 6px; line-height: 15px; padding: 10px 12px;">
-                            <a href="http://www.pinterest.com/jess2984/my-style/" style="color: rgb(113, 113, 113); text-decoration: none;">
-                                <img src="http://media-cache-ak0.pinimg.com/avatars/jess2984_1337116709_30.jpg" class="" alt="My Style" style="max-width: 100%; height: 50px; vertical-align: middle; border: 0px; border-radius: 50%; float: left; margin-right: 5px; width: 50px;">
-                                <div class="" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Simon Strumse</div>
-                                <div class="" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #555;">shared with you</div>
-                                <div class="" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #555;">today</div>
-                            </a>
 
-                        </div>
+<div class="" style="overflow: hidden; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(231, 231, 231); color: rgb(102, 102, 102); background-color: white;">
+    <div class="" style="float: left; margin: 10px; vertical-align: top; width: 50px;">
+        <a class="" style="color: rgb(113, 113, 113); font-weight: bold; text-decoration: none; display: block; text-align: center"><span style="display: block;">
+            <img src="http://dev.filmgrail.com:8001/apiv2/User/GetSmallPhoto/2" style="max-width: 100%; height: 50px; vertical-align: middle; border: 0px; width: 50px; border-radius: 50%;"></span>
+            <span style="font-size: 12px; font-weight: normal">4d ago</span>
+        </a>
+    </div>
+    <div class="" style="font-size: 12px; line-height: 15px; margin: 10px 12px; overflow: hidden;">
+        <div class="" style="margin: 0px;"><span style="margin: 0px;"><a class="" href="#" style="color: rgb(113, 113, 113); font-weight: bold; text-decoration: none;">Simon Strumse&nbsp;</a>liked the movie you sent him</span></div>
+        <div class="" style="margin-top: 7px;">
+            <a class="" href="http://www.pinterest.com/news/4748475846474342124" style="color: rgb(113, 113, 113); font-weight: bold; text-decoration: none; display: inline-block; margin-right: 4px; vertical-align: top; width: 50px;"><span class="" style="display: block;">
+                <img src="https://image.tmdb.org/t/p/w185/AliSeCLFB6ZAkQIxosr8RAkFf6R.jpg" style="max-width: 100%; vertical-align: middle; border: 0px; width: 50px; border-radius: 3px;"></span></a>&nbsp;<a class="" href="http://www.pinterest.com/news/4748475846474342124" style="color: rgb(113, 113, 113); font-weight: bold; text-decoration: none; display: inline-block; height: 50px; margin-right: 4px; vertical-align: top; width: 50px;"><span class="" style="display: block;">
+                    
+                </a>
+        </div>
+    </div>
+</div>
 
-                        <div class="" style="color: #555; padding: 10px;">
-                            <p>"It's a great movie, you must watch it :)"</p>
-                            <a class="btn btn-default btn-xs"><i class="icon-like"></i>&nbsp;I like the recommendation</a>
-                        </div>
-                    </div>
-                </div>
-                <div ng-if="$last">
-                    <div style="width: 50%" class="pull-right" ng-include="'app/partials/movie2.cshtml'"></div>
-                    <div class="pull-left" style="width: 50%;">
-                        <div class="" style="overflow: hidden; border-radius: 0px 0px 6px 6px; line-height: 15px; padding: 10px 12px;">
-                            <a href="http://www.pinterest.com/jess2984/my-style/" style="color: rgb(113, 113, 113); text-decoration: none;">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6Eqd38sCqonKZ0IJ65kyhikaT6zxJZLE2WaDO5YhpHSeWGb7_FdgWZAk" class="" alt="My Style" style="max-width: 100%; height: 50px; vertical-align: middle; border: 0px; border-radius: 50%; float: left; margin-right: 5px; width: 50px;">
-                                <div class="" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Filmgrail</div>
-                                <div class="" style="color: #555;">Personal reccomendation for yesterday</div>
-                            </a>
-                        </div>
-                         <div class="" style="color: #555; padding: 10px">
-                            <p>"Fits you teaste profile (high action and medium comedy), avaiable on netflix and liked by 4 of your friends."</p>
-                             <a class="btn btn-default btn-xs"><i class="icon-like"></i>&nbsp;I like the recommendation</a>
-                             <a class="btn btn-default btn-xs top10"><i class="icon-unlike"></i>&nbsp;Not relevant</a>
-                        </div>
-                    </div>
-                </div>
+<div class="" style="overflow: hidden; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(231, 231, 231); color: rgb(102, 102, 102); background-color: white;">
+    <div class="" style="float: left; margin: 10px; vertical-align: top; width: 50px;">
+        <a class="" style="color: rgb(113, 113, 113); font-weight: bold; text-decoration: none; display: block; text-align: center"><span style="display: block;">
+            <img src="http://dev.filmgrail.com:8001/apiv2/User/GetSmallPhoto/2" style="max-width: 100%; height: 50px; vertical-align: middle; border: 0px; width: 50px; border-radius: 50%;"></span>
+            <span style="font-size: 12px; font-weight: normal">4d ago</span>
+        </a>
+    </div>
+    <div class="" style="font-size: 12px; line-height: 15px; margin: 10px 12px; overflow: hidden;">
+        <div class="" style="margin: 0px;"><span style="margin: 0px;"><a class="" href="#" style="color: rgb(113, 113, 113); font-weight: bold; text-decoration: none;">Simon Strumse&nbsp;</a>saved the movie you sent him</span></div>
+        <div class="" style="margin-top: 7px;">
+            <a class="" href="http://www.pinterest.com/news/4748475846474342124" style="color: rgb(113, 113, 113); font-weight: bold; text-decoration: none; display: inline-block; margin-right: 4px; vertical-align: top; width: 50px;"><span class="" style="display: block;">
+                <img src="https://image.tmdb.org/t/p/w185/AliSeCLFB6ZAkQIxosr8RAkFf6R.jpg" style="max-width: 100%; vertical-align: middle; border: 0px; width: 50px; border-radius: 3px;"></span></a>&nbsp;<a class="" href="http://www.pinterest.com/news/4748475846474342124" style="color: rgb(113, 113, 113); font-weight: bold; text-decoration: none; display: inline-block; height: 50px; margin-right: 4px; vertical-align: top; width: 50px;"><span class="" style="display: block;">
+                    
+                </a>
+        </div>
+    </div>
+</div>
 
+<div class="" style="overflow: hidden; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(231, 231, 231); color: rgb(102, 102, 102); background-color: white;">
+    <div class="" style="float: left; margin: 10px; vertical-align: top; width: 50px;">
+        <a class="" style="color: rgb(113, 113, 113); font-weight: bold; text-decoration: none; display: block; text-align: center"><span style="display: block;">
+            <img src="http://dev.filmgrail.com:8001/apiv2/User/GetSmallPhoto/2" style="max-width: 100%; height: 50px; vertical-align: middle; border: 0px; width: 50px; border-radius: 50%;"></span>
+            <span style="font-size: 12px; font-weight: normal">4d ago</span>
+        </a>
+    </div>
+    <div class="" style="font-size: 12px; line-height: 15px; margin: 10px 12px; overflow: hidden;">
+        <div class="" style="margin: 0px;"><span style="margin: 0px;"><a class="" href="#" style="color: rgb(113, 113, 113); font-weight: bold; text-decoration: none;">Simon Strumse&nbsp;</a>found a movie by a tag you've added "sport"</span></div>
+        <div class="" style="margin-top: 7px;">
+            <a class="" href="http://www.pinterest.com/news/4748475846474342124" style="color: rgb(113, 113, 113); font-weight: bold; text-decoration: none; display: inline-block; margin-right: 4px; vertical-align: top; width: 50px;"><span class="" style="display: block;">
+                <img src="https://image.tmdb.org/t/p/w185/AliSeCLFB6ZAkQIxosr8RAkFf6R.jpg" style="max-width: 100%; vertical-align: middle; border: 0px; width: 50px; border-radius: 3px;"></span></a>&nbsp;<a class="" href="http://www.pinterest.com/news/4748475846474342124" style="color: rgb(113, 113, 113); font-weight: bold; text-decoration: none; display: inline-block; height: 50px; margin-right: 4px; vertical-align: top; width: 50px;"><span class="" style="display: block;">
+                    
+                </a>
+        </div>
+    </div>
+</div>
 
+<div class="" style="overflow: hidden; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(231, 231, 231); color: rgb(102, 102, 102); background-color: white;">
+    <div class="" style="float: left; margin: 10px; vertical-align: top; width: 50px;">
+        <a class="" style="color: rgb(113, 113, 113); font-weight: bold; text-decoration: none; display: block; text-align: center"><span style="display: block;">
+            <img src="http://dev.filmgrail.com:8001/apiv2/User/GetSmallPhoto/2" style="max-width: 100%; height: 50px; vertical-align: middle; border: 0px; width: 50px; border-radius: 50%;"></span>
+            <span style="font-size: 12px; font-weight: normal">4d ago</span>
+        </a>
+    </div>
+    <div class="" style="font-size: 12px; line-height: 15px; margin: 10px 12px; overflow: hidden;">
+        <div class="" style="margin: 0px;"><span style="margin: 0px;"><a class="" href="#" style="color: rgb(113, 113, 113); font-weight: bold; text-decoration: none;">Simon Strumse&nbsp;</a>followed your collection</span></div>
+        <div class="" style="margin-top: 7px;">
+            <a class="" href="http://www.pinterest.com/news/4748475846474342124" style="color: rgb(113, 113, 113); font-weight: bold; text-decoration: none; display: inline-block; margin-right: 4px; vertical-align: top; width: 100px;"><span class="" style="display: block;">
+                <img src="https://image.tmdb.org/t/p/w185/zMP1PEvwH8Uy6jiIG1Qzp0svS1q.jpg" style="max-width: 48%; vertical-align: middle; border: 0px; border-radius: 0;">
+                <img src="https://image.tmdb.org/t/p/w185/AliSeCLFB6ZAkQIxosr8RAkFf6R.jpg" style="max-width: 48%; vertical-align: middle; border: 0px; border-radius: 0;">
+                <img src="https://image.tmdb.org/t/p/w185/eUAg3pUwHmV14sPnu2ITxW5daf0.jpg" style="max-width: 48%; vertical-align: middle; border: 0px; border-radius: 0;">
+                <img src="https://image.tmdb.org/t/p/w185/zMP1PEvwH8Uy6jiIG1Qzp0svS1q.jpg" style="max-width: 48%; vertical-align: middle; border: 0px; border-radius: 0;">
+            </a>&nbsp;
+            <div class="" href="http://www.pinterest.com/news/4748475846474342124" style="color: rgb(113, 113, 113); font-weight: bold; text-decoration: none; display: inline-block; margin-right: 4px; vertical-align: top;">
+                <p class="" style="">Best sport movies</p>
             </div>
         </div>
     </div>
-    <div class="col-md-4 filter-panel hidden-xs" style="padding-top: 20px; background: #fafafa; height: 600px; font-size: 75%;" ng-include="'app/partials/filters2.cshtml'"></div>
 </div>
+
+<br /><br /><br /><br /><br /><br /><br />
