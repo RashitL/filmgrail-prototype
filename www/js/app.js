@@ -38,7 +38,7 @@ var app = angular.module("starter", ["ngAnimate", "ionic", "ngCordova", "starter
             .state("tab.feed", {
                 url: "/feed",
                 views: {
-                    'tab-feed': {
+                    'menuContent': {
                         templateUrl: "templates/tab-feed.html",
                         controller: "FeedCtrl"
                     }
@@ -47,25 +47,25 @@ var app = angular.module("starter", ["ngAnimate", "ionic", "ngCordova", "starter
             .state("tab.search", {
                 url: "/search",
                 views: {
-                    'tab-search': {
+                    'menuContent': {
                         templateUrl: "templates/tab-search.html",
                         controller: "SearchCtrl"
                     }
                 }
             })
-            .state("tab.snap-event", {
-                url: "/snap-event",
+            .state("filters", {
+                url: "/filters",
                 views: {
-                    'tab-snap-event': {
-                        templateUrl: "templates/tab-snap-event.html",
-                        controller: "SnapEventCtrl"
+                    'menuContent': {
+                        templateUrl: "templates/event-detail.html",
+                        controller: "ActivityCtrl"
                     }
                 }
             })
             .state("tab.activity", {
                 url: "/activity",
                 views: {
-                    'tab-activity': {
+                    'menuContent': {
                         templateUrl: "templates/tab-activity.html",
                         controller: "ActivityCtrl"
                     }
@@ -74,7 +74,7 @@ var app = angular.module("starter", ["ngAnimate", "ionic", "ngCordova", "starter
             .state("tab.event-detail", {
                 url: "/feed/:eventId",
                 views: {
-                    'tab-feed': {
+                    'menuContent': {
                         templateUrl: "templates/event-detail.html",
                         controller: "EventDetailCtrl"
                     }
@@ -83,7 +83,7 @@ var app = angular.module("starter", ["ngAnimate", "ionic", "ngCordova", "starter
             .state("tab.account", {
                 url: "/account",
                 views: {
-                    'tab-account': {
+                    'menuContent': {
                         templateUrl: "templates/tab-account.html",
                         controller: "AccountCtrl"
                     }
@@ -91,6 +91,6 @@ var app = angular.module("starter", ["ngAnimate", "ionic", "ngCordova", "starter
             });
 
         // if none of the above states are matched, use this as the fallback
-        $urlRouterProvider.otherwise("/tab/feed");
+        $urlRouterProvider.otherwise("/tab/search");
 
     });

@@ -1,15 +1,48 @@
-<ion-view view-title="Explore events">
-    <ion-content style="-ms-opacity: 0.5; opacity: 0.4">
-        <div class="list card">
-            <div class="item">
-                <h2>This feature is coming soon..</h2>
-                <p>"I just live by the ABCs: Adventurous, Brave, Creative"</p>
-            </div>
+<ion-view view-title="{{superModel.totalMovies}} movies {{superModel.searchText}}">
+    <ion-nav-buttons side="primary">
+    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+    <ion-nav-buttons side="secondary">
+        <div class="buttons">
+            <button class="button button-icon ion-more" ng-click="openPopover($event)">
+            </button>
+        </div>
+    </ion-nav-buttons>
+    
+    
 
-            <div class="item item-image">
-                <img src="http://www.addicted2fun.com/wp-content/uploads/Quotes-On-Peace-114555056.jpg">
+    <ion-content class="row-no-padding">
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="loadData()">
+        </ion-refresher>
+        
+
+        <div class="list">
+            <div class="item">
+                <ion-scroll zooming="true" direction="x" style="width: 500px; height: 40px">
+                    <div class="button-bar-inline" style="width: auto; height: 40px;" >
+                        <a ng-repeat="tag in tags" class="button button-clear" ng-class="{'button-outline':hasTagInSearch(tag.Title)}" ng-style="{'color':tag.Color}" ng-click="addTag(tag.Title)">{{tag.Title}}</a>
+                    </div>
+
+                </ion-scroll>
+
+                
+            </div>
+            <label class="item ">
+                <a ui-sref="filters">Filters</a>
+            </label>
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search" ng-model="superModel.searchText" ng-change="loadData()">
+            </label>
+            
+            <div collection-repeat="movie in feed"  on-swipe-left="alert('hello')" class="item item-thumbnail-left">
+                <img ng-src="{{getPoster(movie.PosterPath)}}">
+                <h2>{{ movie.Title }}</h2>
+                <h3>{{ movie.Tags.join(', ') }}</h3>
+                <h3>{{ movie.Release }}, IMDB {{ movie.ImdbRating }}</h3>
             </div>
         </div>
     </ion-content>
 </ion-view>
-

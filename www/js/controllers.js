@@ -1,5 +1,22 @@
 angular.module("starter.controllers", [])
     .controller("FeedCtrl", function ($scope, $stateParams, $http, appConfig, $ionicLoading, $ionicPopover) {
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    })
+    .controller("SearchCtrl", function ($scope, $stateParams, $http, appConfig, $ionicLoading, $ionicPopover) {
         $ionicPopover.fromTemplateUrl('templates/popover.html', {
             scope: $scope
         }).then(function (popover) {
@@ -25,7 +42,7 @@ angular.module("starter.controllers", [])
         });
 
         $scope.superModel = { searchText: "", totalMovies: 0 };
-        $scope.loadData = function() {
+        $scope.loadData = function () {
             //$http.get(appConfig.apiUrl).
             //    success(function(data, status) {
             //        $scope.feed = data;
@@ -33,56 +50,35 @@ angular.module("starter.controllers", [])
             //        // Stop the ion-refresher from spinning
             //        $scope.$broadcast('scroll.refreshComplete');
             //    });
-            
+
             $ionicLoading.show({
                 template: 'Loading...', noBackdrop: true, delay: 300,
             });
 
             $http.get("http://filmgrail.com:8001/apiv2/SearchMovie/Search/Get?Action=0&Atmosphere=0&Comedy=0&Drama=0&EndYear=2015&Horror=0&KeyWords=" + $scope.superModel.searchText + "&Musical=0&Mystical=0&Rating=6.0&Romantic=0&Sad=0&Skip=0&StartYear=1930&Suspense=0&Take=40&loadingMoreMovies=false").
-                success(function(data, status) {
+                success(function (data, status) {
                     $scope.feed = data.Movies;
                     $scope.tags = $scope.superModel.searchText == '' ? [{ Title: 'In-cinemas' }, { Title: 'Streaming' }, { Title: 'On-tv' }] : data.Tags;
                     $scope.superModel.totalMovies = data.Total;
-                }).finally(function() {
+                }).finally(function () {
                     // Stop the ion-refresher from spinning
                     $scope.$broadcast('scroll.refreshComplete');
                     $ionicLoading.hide();
                 });
         };
 
-        $scope.getPoster = function(poster) {
+        $scope.getPoster = function (poster) {
             return poster;
         };
-        
+
         $scope.items = [{ data: "This is something" }, { data: "something else" }, { data: "another thing" }, { data: "it keeps going" }, { data: "seemingly forever..." }, { data: "and forever..." }, { data: "and forever..." }, { data: "and forever..." }, { data: "and forever..." }, { data: "and forever..." }, { data: "and forever..." }];
 
         $scope.loadData();
 
-        $scope.addTag = function(newTag) {
+        $scope.addTag = function (newTag) {
             $scope.superModel.searchText += ' ' + newTag;
             $scope.loadData();
         };
-
-        $scope.hasTagInSearch = function (newTag) {
-            return $scope.superModel.searchText.contains(newTag);
-        };
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-    })
-    .controller("SearchCtrl", function ($scope, $stateParams) {
-        //--
     })
     .controller("SnapEventCtrl", function ($scope, $stateParams) {
         //--

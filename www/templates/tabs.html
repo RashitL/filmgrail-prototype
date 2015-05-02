@@ -1,22 +1,31 @@
-<!--
-Create tabs with an icon and label, using the tabs-positive style.
-Each tab's child <ion-nav-view> directive will have its own
-navigation history that also transitions its views in and out.
--->
-<ion-tabs class="tabs-icon-only tabs-background-light">
-    <ion-tab icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/tab/feed">
-        <ion-nav-view name="tab-feed"></ion-nav-view>
-    </ion-tab>
+<ion-side-menus>
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-chevron-left"></i> Back</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-pane>
 
-    <ion-tab icon-off="ion-ios-search" icon-on="ion-ios-search-strong" href="#/tab/search">
-        <ion-nav-view name="tab-search"></ion-nav-view>
-    </ion-tab>
-
-    <ion-tab icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes" href="#/tab/activity">
-        <ion-nav-view name="tab-activity"></ion-nav-view>
-    </ion-tab>
-
-    <ion-tab icon-off="ion-ios-person-outline" icon-on="ion-ios-person" href="#/tab/account">
-        <ion-nav-view name="tab-account"></ion-nav-view>
-    </ion-tab>
-</ion-tabs>
+  <ion-side-menu side="left">
+    <header class="bar bar-header bar-positive">
+      <h1 class="title">Rashid Lepshokov</h1>
+    </header>
+    <ion-content class="has-header">
+        <ion-list>
+            <ion-item nav-clear menu-close href="#/tab/feed">
+                Feed
+            </ion-item>
+            <ion-item nav-clear menu-close href="#/tab/search">
+                Search
+            </ion-item>
+            <ion-item nav-clear menu-close href="#/tab/activity">
+                Activity
+            </ion-item>
+            <ion-item nav-clear menu-close href="#/tab/account">
+                Account
+            </ion-item>
+            <ion-item nav-clear menu-close href="#/tab/search/filters">Filters</ion-item>
+        </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
