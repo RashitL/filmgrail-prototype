@@ -1,0 +1,65 @@
+<ion-view title="Tv, cinemas and streaming">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <a class="button button-icon icon ion-ios-search" href="#">
+      </a>
+    </ion-nav-buttons>
+
+  <ion-content class="has-header">
+    <ion-list>
+        <div class="item item-divider">
+            12589 movies on streaming
+        </div>
+        <div class="item">
+            <ion-scroll zooming="true" direction="x" style="width: 500px; height: 150px">
+                <div class="button-bar-inline" style="width: auto; height: auto;" >
+                    <a ng-repeat="movie in movies" class="button button-clear" href="#/app/filter/1"><img style="width: 100px" ng-src="{{movie.PosterPath}}"></a>
+                </div>
+            </ion-scroll>
+        </div>
+
+            <div class="item item-divider">
+            455 movies on TV
+        </div>
+        <div class="item">
+            <ion-scroll zooming="true" direction="x" style="width: 500px; height: 150px">
+                <div class="button-bar-inline" style="width: auto; height: auto;" >
+                    <a ng-repeat="movie in movies" class="button button-clear" href="#/app/filter/1"><img style="width: 100px" ng-src="{{movie.PosterPath}}"></a>
+                </div>
+            </ion-scroll>
+        </div>
+        <div class="item item-divider">
+            76 movies in cinemas
+        </div>
+        <div class="item">
+            <ion-scroll zooming="true" direction="x" style="width: 500px; height: 150px">
+                <div class="button-bar-inline" style="width: auto; height: auto;" >
+                    <a ng-repeat="movie in movies" class="button button-clear" href="#/app/filter/1"><img style="width: 100px" ng-src="{{movie.PosterPath}}"></a>
+                </div>
+            </ion-scroll>
+        </div>
+        <div class="item item-divider">
+            Genres and mood
+        </div>
+        <div class="item">
+            <ion-scroll zooming="true" direction="x" style="width: 500px; height: 150px">
+                <div class="button-bar-inline" style="width: auto; height: auto;" >
+                    <a ng-repeat="movie in movies" class="button button-clear" href="#/app/filter/1"><img style="width: 100px" ng-src="{{movie.PosterPath}}"></a>
+                </div>
+            </ion-scroll>
+        </div>
+        <div class="item item-divider">
+            Top collections
+        </div>
+        <div class="item">
+            <ion-scroll zooming="true" direction="x" style="width: 500px; height: 150px">
+                <div class="button-bar-inline" style="width: auto; height: auto;" >
+                    <a ng-repeat="movie in movies" class="button button-clear" href="#/app/filter/1"><img style="width: 100px" ng-src="{{movie.PosterPath}}"></a>
+                </div>
+            </ion-scroll>
+        </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

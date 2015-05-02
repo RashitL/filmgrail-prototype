@@ -19,78 +19,39 @@ var app = angular.module("starter", ["ngAnimate", "ionic", "ngCordova", "starter
             }
         });
     })
-    .config(function($stateProvider, $urlRouterProvider) {
 
-        // Ionic uses AngularUI Router which uses the concept of states
-        // Learn more here: https://github.com/angular-ui/ui-router
-        // Set up the various states which the app can be in.
-        // Each state's controller can be found in controllers.js
-        $stateProvider
-
-            // setup an abstract state for the tabs directive
-            .state("tab", {
-                url: "/tab",
-                abstract: true,
-                templateUrl: "templates/tabs.html"
-            })
-
-            // Each tab has its own nav history stack:
-            .state("tab.feed", {
-                url: "/feed",
-                views: {
-                    'menuContent': {
-                        templateUrl: "templates/tab-feed.html",
-                        controller: "FeedCtrl"
-                    }
-                }
-            })
-            .state("tab.search", {
-                url: "/search",
-                views: {
-                    'menuContent': {
-                        templateUrl: "templates/tab-search.html",
-                        controller: "SearchCtrl"
-                    }
-                }
-            })
-            .state("filters", {
-                url: "/filters",
-                views: {
-                    'menuContent': {
-                        templateUrl: "templates/event-detail.html",
-                        controller: "ActivityCtrl"
-                    }
-                }
-            })
-            .state("tab.activity", {
-                url: "/activity",
-                views: {
-                    'menuContent': {
-                        templateUrl: "templates/tab-activity.html",
-                        controller: "ActivityCtrl"
-                    }
-                }
-            })
-            .state("tab.event-detail", {
-                url: "/feed/:eventId",
-                views: {
-                    'menuContent': {
-                        templateUrl: "templates/event-detail.html",
-                        controller: "EventDetailCtrl"
-                    }
-                }
-            })
-            .state("tab.account", {
-                url: "/account",
-                views: {
-                    'menuContent': {
-                        templateUrl: "templates/tab-account.html",
-                        controller: "AccountCtrl"
-                    }
-                }
-            });
-
-        // if none of the above states are matched, use this as the fallback
-        $urlRouterProvider.otherwise("/tab/search");
-
-    });
+.config(function ($stateProvider, $urlRouterProvider) {
+    $stateProvider
+      .state('app', {
+          url: "/app",
+          abstract: true,
+          templateUrl: "templates/tabs.html"
+      })
+      .state('app.browse', {
+          url: "/browse",
+          views: {
+              'menuContent': {
+                  templateUrl: "templates/browse.html",
+                  controller: 'BrowseCtrl'
+              }
+          }
+      })
+      .state('app.filter', {
+          url: "/filter/:contentId",
+          views: {
+              'menuContent': {
+                  templateUrl: "templates/tab-search.html",
+                  controller: 'SearchCtrl'
+              }
+          }
+      }).state('app.movie', {
+          url: "/movie/:movieId",
+          views: {
+              'menuContent': {
+                  templateUrl: "templates/movie.html"
+              }
+          }
+      });
+    // if none of the above states are matched, use this as the fallback
+    $urlRouterProvider.otherwise('/app/browse');
+});

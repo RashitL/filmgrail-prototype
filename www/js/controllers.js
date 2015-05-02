@@ -96,4 +96,15 @@ angular.module("starter.controllers", [])
         $scope.settings = {
             enableFriends: true
         };
-    });
+    })
+
+.controller('BrowseCtrl', function ($scope, $http) {
+    $http.get("http://filmgrail.com:8001/apiv2/SearchMovie/Search/Get?Action=0&Atmosphere=0&Comedy=0&Drama=0&EndYear=2015&Horror=0&KeyWords=on-tv&Musical=0&Mystical=0&Rating=6.0&Romantic=0&Sad=0&Skip=0&StartYear=1930&Suspense=0&Take=40&loadingMoreMovies=false").
+                success(function (data, status) {
+                    $scope.movies = data.Movies;
+                    
+                }).finally(function () {
+                    // Stop the ion-refresher from spinning
+                    $scope.$broadcast('scroll.refreshComplete');
+                });
+});
