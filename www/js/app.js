@@ -37,7 +37,7 @@ var app = angular.module("starter", ["ngAnimate", "ionic", "ngCordova", "starter
           }
       })
       .state('app.filter', {
-          url: "/filter/:contentId",
+          url: "/filter/:searchTag",
           views: {
               'menuContent': {
                   templateUrl: "templates/tab-search.html",
@@ -48,7 +48,8 @@ var app = angular.module("starter", ["ngAnimate", "ionic", "ngCordova", "starter
           url: "/movie/:movieId",
           views: {
               'menuContent': {
-                  templateUrl: "templates/movie.html"
+                  templateUrl: "templates/movie.html",
+                  controller: 'MovieCtrl'
               }
           }
       });

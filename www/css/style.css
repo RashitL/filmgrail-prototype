@@ -2,3 +2,57 @@
   height: 300px;
   width: 150px;
 }
+
+.back-from-search .back-text{
+    display: none!important;
+}
+
+.search-in-header {
+      background: #078073;
+  color: white;
+  border-radius: 5px;
+  border-width: 0;
+    width: 350px;
+}
+
+.search-in-header input{
+  color: white;
+}
+
+.col-box {
+    border-radius: 3px;
+    background: white;
+    margin-right: 3px;
+}
+
+.box {
+    border-radius: 3px;
+    background: white;
+    margin-right: 3px;
+    float: left;
+    width: 100px;
+    height: 30px;
+    padding: 5px
+}
+
+h6 {
+    color: #aaa!important;
+}
+
+.movie-card {
+    height: 176px;
+  border-radius: 5px;
+}
+
+.add-movie-icon {
+      position: absolute;
+  font-size: 20px;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.54);
+  color: white;
+}
+
+.tag-button {
+    border-radius: 5px;
+    margin-right: 5px!important;
+}

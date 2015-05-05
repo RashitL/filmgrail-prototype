@@ -1,65 +1,77 @@
-<ion-view title="Tv, cinemas and streaming">
+<ion-view title="Browse movies">
     <ion-nav-buttons side="left">
         <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
     </ion-nav-buttons>
     <ion-nav-buttons side="right">
-        <a class="button button-icon icon ion-ios-search" href="#">
+        <a class="button button-icon icon ion-ios-search" href="#/app/filter/">
       </a>
     </ion-nav-buttons>
 
   <ion-content class="has-header">
     <ion-list>
-        <div class="item item-divider">
-            12589 movies on streaming
-        </div>
+        <a class="item item-divider" href="#/app/filter/streaming">
+            <span>On streaming</span>
+            <span class="item-note">
+                12323 <i class="ion-ios-arrow-right"></i>
+            </span>
+        </a>
         <div class="item">
-            <ion-scroll zooming="true" direction="x" style="width: 500px; height: 150px">
-                <div class="button-bar-inline" style="width: auto; height: auto;" >
-                    <a ng-repeat="movie in movies" class="button button-clear" href="#/app/filter/1"><img style="width: 100px" ng-src="{{movie.PosterPath}}"></a>
+            <ion-scroll zooming="true" direction="x" style="width: 500px; height: 175px">
+                <div class="" style="width: auto; height: auto;" >
+                    <a ng-repeat="movie in moviesOnStreaming" class="button button-clear" href="#/app/movie/{{movie.Id}}">
+                        <img style="height: 155px" ng-src="{{movie.PosterPath}}">
+                        <p style="  margin-top: -25px;width: 100px">{{movie.Title}}</p>
+                    </a>
                 </div>
             </ion-scroll>
         </div>
 
-            <div class="item item-divider">
-            455 movies on TV
-        </div>
+            <a class="item item-divider" href="#/app/filter/on-tv">
+                On TV
+                <span class="item-note">
+                287 <i class="ion-ios-arrow-right"></i>
+            </span>
+        </a>
         <div class="item">
-            <ion-scroll zooming="true" direction="x" style="width: 500px; height: 150px">
+            <ion-scroll zooming="true" direction="x" style="width: 500px; height: 175px">
                 <div class="button-bar-inline" style="width: auto; height: auto;" >
-                    <a ng-repeat="movie in movies" class="button button-clear" href="#/app/filter/1"><img style="width: 100px" ng-src="{{movie.PosterPath}}"></a>
+                    <a ng-repeat="movie in moviesOnTv" class="button button-clear" href="#/app/movie/{{movie.Id}}">
+                        <img style="height: 155px" ng-src="{{movie.PosterPath}}">
+                        <p style="  margin-top: -25px;width: 100px">{{movie.Title}}</p>
+                    </a>
+                </div>
+            </ion-scroll>
+        </div>
+        <a class="item item-divider" href="#/app/filter/in-cinemas">
+            In cinemas
+            <span class="item-note">
+                67 <i class="ion-ios-arrow-right"></i>
+            </span>
+        </a>
+        <div class="item">
+            <ion-scroll zooming="true" direction="x" style="width: 500px; height: 175px">
+                <div class="button-bar-inline" style="width: auto; height: auto;" >
+                    <a ng-repeat="movie in moviesInCinemas" class="button button-clear" href="#/app/movie/{{movie.Id}}">
+                        <img style="height: 155px" ng-src="{{movie.PosterPath}}">
+                        <p style="  margin-top: -25px;width: 100px">{{movie.Title}}</p>
+                    </a>
                 </div>
             </ion-scroll>
         </div>
         <div class="item item-divider">
-            76 movies in cinemas
+            Coming soon
         </div>
         <div class="item">
-            <ion-scroll zooming="true" direction="x" style="width: 500px; height: 150px">
+            <ion-scroll zooming="true" direction="x" style="width: 500px; height: 175px">
                 <div class="button-bar-inline" style="width: auto; height: auto;" >
-                    <a ng-repeat="movie in movies" class="button button-clear" href="#/app/filter/1"><img style="width: 100px" ng-src="{{movie.PosterPath}}"></a>
+                    <a ng-repeat="movie in moviesInCinemas" class="button button-clear" href="#/app/movie/{{movie.Id}}">
+                        <img style="height: 155px" ng-src="{{movie.PosterPath}}">
+                        <p style="  margin-top: -25px;width: 100px">{{movie.Title}}</p>
+                    </a>
                 </div>
             </ion-scroll>
         </div>
-        <div class="item item-divider">
-            Genres and mood
-        </div>
-        <div class="item">
-            <ion-scroll zooming="true" direction="x" style="width: 500px; height: 150px">
-                <div class="button-bar-inline" style="width: auto; height: auto;" >
-                    <a ng-repeat="movie in movies" class="button button-clear" href="#/app/filter/1"><img style="width: 100px" ng-src="{{movie.PosterPath}}"></a>
-                </div>
-            </ion-scroll>
-        </div>
-        <div class="item item-divider">
-            Top collections
-        </div>
-        <div class="item">
-            <ion-scroll zooming="true" direction="x" style="width: 500px; height: 150px">
-                <div class="button-bar-inline" style="width: auto; height: auto;" >
-                    <a ng-repeat="movie in movies" class="button button-clear" href="#/app/filter/1"><img style="width: 100px" ng-src="{{movie.PosterPath}}"></a>
-                </div>
-            </ion-scroll>
-        </div>
+        
     </ion-list>
   </ion-content>
 </ion-view>

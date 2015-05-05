@@ -17,6 +17,7 @@ angular.module("starter.controllers", [])
 
     })
     .controller("SearchCtrl", function ($scope, $stateParams, $http, appConfig, $ionicLoading, $ionicPopover) {
+        
         $ionicPopover.fromTemplateUrl('templates/popover.html', {
             scope: $scope
         }).then(function (popover) {
@@ -41,7 +42,7 @@ angular.module("starter.controllers", [])
             // Execute action
         });
 
-        $scope.superModel = { searchText: "", totalMovies: 0 };
+        $scope.superModel = { searchText: $stateParams.searchTag, totalMovies: 0 };
         $scope.loadData = function () {
             //$http.get(appConfig.apiUrl).
             //    success(function(data, status) {
@@ -57,8 +58,9 @@ angular.module("starter.controllers", [])
 
             $http.get("http://filmgrail.com:8001/apiv2/SearchMovie/Search/Get?Action=0&Atmosphere=0&Comedy=0&Drama=0&EndYear=2015&Horror=0&KeyWords=" + $scope.superModel.searchText + "&Musical=0&Mystical=0&Rating=6.0&Romantic=0&Sad=0&Skip=0&StartYear=1930&Suspense=0&Take=40&loadingMoreMovies=false").
                 success(function (data, status) {
-                    $scope.feed = data.Movies;
-                    $scope.tags = $scope.superModel.searchText == '' ? [{ Title: 'In-cinemas' }, { Title: 'Streaming' }, { Title: 'On-tv' }] : data.Tags;
+                    $scope.feed = Enumerable.From(data.Movies).OrderByDescending('t=>t.ImdbRating').ToArray();;
+                    $scope.tags = $scope.superModel.searchText == '' ? [] : data.Tags;
+                    $scope.recentSearches = ['in-cinema action', 'comedy adam-sandler', 'interstellar'];
                     $scope.superModel.totalMovies = data.Total;
                 }).finally(function () {
                     // Stop the ion-refresher from spinning
@@ -79,6 +81,10 @@ angular.module("starter.controllers", [])
             $scope.superModel.searchText += ' ' + newTag;
             $scope.loadData();
         };
+        
+        $scope.removeMovie = function(movie) {
+            $scope.feed.splice($scope.feed.indexOf(movie), 1);
+        }
     })
     .controller("SnapEventCtrl", function ($scope, $stateParams) {
         //--
@@ -99,10 +105,38 @@ angular.module("starter.controllers", [])
     })
 
 .controller('BrowseCtrl', function ($scope, $http) {
+    $scope.genres = ['Action', 'Comedy', 'Drama', 'Horror', 'Sci-fi/fantasy', 'Romance', 'Musical', 'Sport'];
+    $http.get("http://filmgrail.com:8001/apiv2/SearchMovie/Search/Get?Action=0&Atmosphere=0&Comedy=0&Drama=0&EndYear=2015&Horror=0&KeyWords=streaming&Musical=0&Mystical=0&Rating=6.0&Romantic=0&Sad=0&Skip=0&StartYear=1930&Suspense=0&Take=40&loadingMoreMovies=false").
+                success(function (data, status) {
+                    $scope.moviesOnStreaming = Enumerable.From(data.Movies).OrderByDescending('t=>t.ImdbRating').ToArray();
+                    
+                }).finally(function () {
+                    // Stop the ion-refresher from spinning
+                    $scope.$broadcast('scroll.refreshComplete');
+                });
+    
     $http.get("http://filmgrail.com:8001/apiv2/SearchMovie/Search/Get?Action=0&Atmosphere=0&Comedy=0&Drama=0&EndYear=2015&Horror=0&KeyWords=on-tv&Musical=0&Mystical=0&Rating=6.0&Romantic=0&Sad=0&Skip=0&StartYear=1930&Suspense=0&Take=40&loadingMoreMovies=false").
                 success(function (data, status) {
-                    $scope.movies = data.Movies;
-                    
+                    $scope.moviesOnTv = Enumerable.From(data.Movies).OrderByDescending('t=>t.ImdbRating').ToArray();
+
+                }).finally(function () {
+                    // Stop the ion-refresher from spinning
+                    $scope.$broadcast('scroll.refreshComplete');
+                });
+    
+    $http.get("http://filmgrail.com:8001/apiv2/SearchMovie/Search/Get?Action=0&Atmosphere=0&Comedy=0&Drama=0&EndYear=2015&Horror=0&KeyWords=in-cinemas&Musical=0&Mystical=0&Rating=6.0&Romantic=0&Sad=0&Skip=0&StartYear=1930&Suspense=0&Take=40&loadingMoreMovies=false").
+                success(function (data, status) {
+                    $scope.moviesInCinemas = Enumerable.From(data.Movies).OrderByDescending('t=>t.ImdbRating').ToArray();
+
+                }).finally(function () {
+                    // Stop the ion-refresher from spinning
+                    $scope.$broadcast('scroll.refreshComplete');
+                });
+}).controller('MovieCtrl', function ($scope, $http,$stateParams) {
+    $http.get("http://dev.filmgrail.com:8001/apiv2/Movies/Get?id=" + $stateParams.movieId).
+                success(function (data, status) {
+                    $scope.movie = data;
+
                 }).finally(function () {
                     // Stop the ion-refresher from spinning
                     $scope.$broadcast('scroll.refreshComplete');

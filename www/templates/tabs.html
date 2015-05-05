@@ -2,30 +2,92 @@
 
   <ion-pane ion-side-menu-content>
       <ion-nav-bar class="bar-positive">
-      <ion-nav-back-button class="button-clear"><i class="icon ion-ios-arrow-left"></i> Back</ion-nav-back-button>
+      <ion-nav-back-button class="button-clear button-icon back-from-search"><i class="icon ion-ios-arrow-left" ></i></ion-nav-back-button>
     </ion-nav-bar>
     <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
   </ion-pane>
 
-  <ion-side-menu side="left">
-    <header class="bar bar-header bar-stable">
-      <h1 class="title">Left</h1>
-    </header>
-    <ion-content class="has-header">
-      <ion-list>
-        <ion-item nav-clear menu-close href="#/app/browse">
-          Feed
-        </ion-item>
-        <ion-item nav-clear menu-close href="#/app/browse">
-          Browse
-        </ion-item>
-          <ion-item nav-clear menu-close href="#/app/browse">
-              Activity
-          </ion-item>
-          <ion-item nav-clear menu-close href="#/app/browse">
-              Account
-          </ion-item>
-      </ion-list>
-    </ion-content>
+  <ion-side-menu side="left" width="330">
+      <header class="bar bar-header bar-positive">
+          <div class="tabs tabs-icon-only tabs-positive" style="padding-top: 3px">
+              <a menu-close class="tab-item" href="#/app/browse/">
+                  <i class="icon ion-ios-home-outline"></i>
+              </a>
+              <a menu-close class="tab-item" href="#/app/browse/">
+                  <i class="icon ion-ios-pulse"></i>
+              </a>
+              <a menu-close class="tab-item" href="#/app/filter/">
+                  <i class="icon ion-ios-search"></i>
+              </a>
+              <a menu-close class="tab-item">
+                  <i class="icon ion-ios-people-outline"></i>
+              </a>
+              <a menu-close class="tab-item">
+                  <i class="icon ion-ios-person-outline"></i>
+              </a>
+          </div>
+      </header>
+      <ion-content class="has-header calm-bg">
+          <div class="row"><h6>RECOMMENDATIONS</h6></div>
+          <div class="row padding-bottom">
+              <div class="col col-box">Personal picks</div>
+              <div class="col col-box">From friends</div>
+              <div class="col col-box">Summer mood</div>
+          </div>
+          
+          <div class="row"><h6>SOURCES</h6></div>
+          <div class="row padding-bottom">
+              <div class="col col-box">Streaming</div>
+              <div class="col col-box">On tv</div>
+              <div class="col col-box">In cinemas</div>
+          </div>
+          
+          <div class="row"><h6>GENRES</h6></div>
+          <div class="row padding-bottom">
+              
+              <ion-scroll zooming="true" direction="x" style="width: 318px; height: 30px">
+                  <div style="width: 700px;  height: 30px;" >
+                      <div class="box">Action</div>
+                      <div class="box">Comedy</div>
+                      <div class="box">Drama</div>
+                      <div class="box">Sci-fi/Fantasy</div>
+                      <div class="box">Romance</div>
+                      <div class="box">Horror</div>
+                  </div>
+              </ion-scroll>
+          </div>
+          <div class="row"><h6>STARRING</h6></div>
+          <div class="row padding-bottom">
+              <ion-scroll direction="x" style="width: 318px; height: 30px">
+                <div style="width: 700px;  height: 30px;" >
+                    <div class="box">Johny Depp</div>
+                    <div class="box">Brad Pitt</div>
+                    <div class="box">Adam Sandler</div>
+                    <div class="box">Ben Stiller</div>
+                    <div class="box">Al Pacino</div>
+                </div>
+            </ion-scroll>
+          </div>
+          <div class="row"><h6>TREDNING COLLECTIONS</h6></div>
+          <div class="row padding-bottom">
+              <div class="col col-box">Mind blowing movies
+                  <span class="item-note">
+                      Inge Andre Sandvik 
+                  </span>
+              </div>
+              <div class="col col-box">Simon's watchlist
+                  <span class="item-note">
+                      Simon Strumse 
+                  </span>
+              </div>
+              <div class="col col-box">Best on NetFlix
+                  <span class="item-note">
+                      Rashid Lepshokov 
+                  </span>
+              </div>
+              
+          </div>
+          
+      </ion-content>
   </ion-side-menu>
 </ion-side-menus>
