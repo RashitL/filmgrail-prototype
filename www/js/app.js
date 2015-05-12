@@ -36,6 +36,15 @@ var app = angular.module("starter", ["ngAnimate", "ionic", "ngCordova", "starter
               }
           }
       })
+        .state('app.feed', {
+            url: "/feed",
+            views: {
+                'menuContent': {
+                    templateUrl: "templates/tab-feed.html",
+                    controller: 'SearchCtrl'
+                }
+            }
+        })
       .state('app.filter', {
           url: "/filter/:searchTag",
           views: {

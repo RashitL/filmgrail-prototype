@@ -1,46 +1,81 @@
-<ion-view view-title="{{superModel.totalMovies}} movies {{superModel.searchText}}">
+<ion-view title="FILMGRAIL">
     <ion-nav-buttons side="primary">
-    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
-  </ion-nav-buttons>
-    <ion-nav-buttons side="secondary">
-        <div class="buttons">
-            <button class="button button-icon ion-more" ng-click="openPopover($event)">
-            </button>
-        </div>
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+      
     </ion-nav-buttons>
-  
     
-    
+    <ion-content class="row-no-padding" ng-show="superModel.searchText == ''">
+        <div class="list">
+            
+            <div class="item item-divider">
+                RECENT SEARCHES
+            </div>
+            <a collection-repeat="recentSearch in recentSearches" class="item" ng-click="addTag(recentSearch)" item-height="50">
+                <h2>{{ recentSearch }}</h2>
+            </a> 
+        </div>
+    </ion-content>
 
-    <ion-content class="row-no-padding">
+    <ion-content ng-hide="superModel.searchText == ''" class="calm-bg">
         <ion-refresher
             pulling-text="Pull to refresh..."
             on-refresh="loadData()">
         </ion-refresher>
         
+        <div class="item calm-bg">
+            <ion-scroll zooming="true" direction="x" style="width: 500px; height: 55px">
+                <div class="button-bar-inline" style="width: auto; height: 55px;" >
+                    <a ng-repeat="tag in tags" class="button button-outline tag-button"  ng-class="{'button-outline':hasTagInSearch(tag.Title)}" ng-style="{'border-color':tag.Color,'color':tag.Color}" ng-click="addTag(tag.Title)">{{tag.Title}}</a>
+                </div>
 
-        <div class="list">
-            <div class="item">
-                <ion-scroll zooming="true" direction="x" style="width: 500px; height: 40px">
-                    <div class="button-bar-inline" style="width: auto; height: 40px;" >
-                        <a ng-repeat="tag in tags" class="button button-clear" ng-class="{'button-outline':hasTagInSearch(tag.Title)}" ng-style="{'color':tag.Color}" ng-click="addTag(tag.Title)">{{tag.Title}}</a>
+            </ion-scroll>
+        </div>
+            
+        <div class="item item-divider calm-bg item-borderless" style="padding-top: 0;padding-bottom: 0">
+            {{superModel.totalMovies}} movies sorted by rating 
+            <span class="item-note" ng-click="openPopover($event)">
+                <i class="ion-ios-settings"></i>
+            </span>
+        </div>
+
+        <div collection-repeat="movie in feed" item-height="196"> 
+            <div class="list card movie-card row-no-padding" style="height: 176px">
+                <div class="item row-no-padding">
+                    <div class="row row-no-padding">
+                        <div class="col col-33 calm-bg">
+                            <a href="#/app/movie/{{movie.Id}}">
+                                <i class="ion-ios-plus-empty add-movie-icon"></i>
+                                <img class="item-image" style="width: 100%" ng-src="{{getPoster(movie.PosterPath)}}"/>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    <h2>{{ movie.Title }}</h2>
+                                </div>
+                                <div class="col col-10">
+                                    <i class="ion-ios-close-empty" ng-click="removeMovie(movie)"></i>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="royal">{{ movie.Tags.join(', ') }}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                
+                                <div class="col"><p class="royal">{{ movie.Release }}</p></div>
+                                <div class="col"><p class="royal">IMDB {{ movie.ImdbRating }}</p></div>
+                            </div>
+                            <br/><br/>
+                            <div class="button-bar calm-bg">
+                                <a class="button button-icon ion-thumbsup positive"> 15</a>
+                                <a class="button button-icon ion-thumbsdown assertive"> 2</a>
+                            </div>
+
+                        </div>
                     </div>
-
-                </ion-scroll>
-
-                
-            </div>
-            
-            <label class="item item-input">
-                <i class="icon ion-search placeholder-icon"></i>
-                <input type="text" placeholder="Search" ng-model="superModel.searchText" ng-change="loadData()">
-            </label>
-            
-            <div collection-repeat="movie in feed"  on-swipe-left="alert('hello')" class="item item-thumbnail-left">
-                <img ng-src="{{getPoster(movie.PosterPath)}}">
-                <h2>{{ movie.Title }}</h2>
-                <h3>{{ movie.Tags.join(', ') }}</h3>
-                <h3>{{ movie.Release }}, IMDB {{ movie.ImdbRating }}</h3>
+                </div>
             </div>
         </div>
     </ion-content>
